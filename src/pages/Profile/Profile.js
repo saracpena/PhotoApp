@@ -6,11 +6,13 @@ class Profile extends Component {
         name:'',
     }
 
+
+
     render(){
 
     return ( 
         <div>
-            <h1>Header</h1>
+            <h1>Welcome Back, Sara!</h1>
         <navbar>
             <h6>Posts</h6>
             <h6>About</h6>
@@ -24,14 +26,7 @@ class Profile extends Component {
     }
 
 export default Profile
-// class Profile extends Component {
-//     state={
 
-//     }
-
-//     render(){
-//         return(
-//             <div></div>
-//         )
-//     }
-// }
+//! Render a new welcome message and render name of User.
+// i.e. "{ Random new message }" with API? {this.state.name}"
+// "Happy Tuesday, Sara", "Happy Holidays, Sara"

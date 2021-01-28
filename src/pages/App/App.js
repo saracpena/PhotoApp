@@ -29,20 +29,10 @@ class App extends Component {
         </div> <br/>
         <Router>
           <Switch> 
-            <Route exact path='/login' render={(...props) =>
-              <Login/>
-            }/>
-            <Route path='/register' render={(...props) =>
-              <Register />
-            }/>
+            <Route path='/login' Login={Login}/>
+            <Route path='/register' Register={Register}/>
           </Switch>
         </Router>
-            <Login />
-            <Register />
-            <Profile />
-            <Pictures />
-            <Favorites />
-            <Settings />
      </div>
     );
   }
@@ -50,8 +40,12 @@ class App extends Component {
 
 export default App
 
-
-
+            {/* <Login />
+            <Register />
+            <Profile />
+            <Pictures />
+            <Favorites />
+            <Settings /> */}
 // function App() {
 //   return (
 //     <div className="App">
