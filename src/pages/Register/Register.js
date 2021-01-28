@@ -27,8 +27,9 @@ Password = () => {
                 Email: <input type='text'></input> <br/>
                 Password: <input type='password' value={this.state.PassWord} id='myPW'></input> <br/>
                 Confirm Password: <input type='password' value={this.state.PassWord} id='myPW'></input>
+                <p>Password must be 8 characters minimum</p>
             </form> <br/>
-            <button>Register</button>
+            <button>Submit</button>
         </div>
         )
     }
