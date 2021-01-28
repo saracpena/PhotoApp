@@ -21,7 +21,6 @@ Password = () => {
     render(){
         return(
             <div>
-            <Link to='/login'>Register</Link>
             <header>W E L C O M E &nbsp;&nbsp;&nbsp; T O &nbsp;&nbsp;&nbsp; S W I P E &nbsp;&nbsp;&nbsp; R I G H T</header>
             <form>
                 Name: <input type='text'></input> <br/>

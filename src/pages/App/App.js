@@ -1,9 +1,9 @@
 // React library import
 import React, { Component } from 'react';
 // Route component import
-import { Link, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import {BrowserRouter as Router} from 'react-router-dom'
-import {Redirect} from 'react-router-dom'
+//import {Redirect} from 'react-router-dom'
 //Pages
 import Login from '../Login/Login'
 import Register from '../Register/Register'
