@@ -37,12 +37,12 @@ class App extends Component {
             }/>
           </Switch>
         </Router>
-            {/* <Login />
+            <Login />
             <Register />
             <Profile />
             <Pictures />
             <Favorites />
-            <Settings /> */}
+            <Settings />
      </div>
     );
   }
