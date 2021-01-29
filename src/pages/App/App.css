@@ -9,29 +9,28 @@ body {
 
 /** LOGIN CSS **/
 
-.login-wrapper{
-  height: 10vmin;
-  background-color: #282c34;
-  min-height: 100vh;
-  font-size: calc(2px + 2vmin);
-  color: white;
-}
+
 
 input{
-  margin: 0 0 2px 0;
+  margin: 5px 0 1px 1em;
   border: 2px solid black;
   justify-content: space-evenly;
 }
 
 #login{
-  font-size: calc(2px + 2vmin);
+  margin: 0 0 0 5em;
+  padding: 7px;
+  background-color:#282c34;
+  font-weight: bolder;
   justify-content: space-evenly;
   font-size: 10px;
   color:blanchedalmond;
 }
 
 #register{
-  font-size: calc(2px + 2vmin);
+  padding: 7px;
+  background-color:#282c34;
+  font-weight: bolder;
   justify-content: space-evenly;
   font-size: 10px;
   color:blanchedalmond;
@@ -40,6 +39,28 @@ input{
 
 /** REGISTER CSS **/
 
+form{
+  color: white;
+  margin: 5px 0 1px 1em;
+  padding: 10px 80px 10px 0;
+  justify-content: space-evenly;
+  border: solid black 2px;
+  background-color: #282c34;
+}
+
+p{
+  font-size: small;
+  text-align: right;
+}
+
+#submit{
+  padding: 7px;
+  background-color:#282c34;
+  font-weight: bolder;
+  justify-content: space-evenly;
+  font-size: 10px;
+  color:blanchedalmond;
+}
 
 /** PROFILE CSS **/
 
@@ -100,7 +121,7 @@ h6{
 }
 
 h6:hover{
-  color: plum;
+  color: palevioletred;
   float: left;
 }
 

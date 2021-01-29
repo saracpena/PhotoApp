@@ -24,15 +24,15 @@ class Register extends Component {
     render(){
         return(
             <div>
-            <header>W E L C O M E &nbsp;&nbsp;&nbsp; T O &nbsp;&nbsp;&nbsp; S W I P E &nbsp;&nbsp;&nbsp; R I G H T</header>
+            <header>S I G N - U P</header> <br/>
             <form>
-                Name: <input type='text'></input> <br/>
-                Email: <input type='text'></input> <br/>
-                Password: <input type='password' value={this.state.PassWord} id='myPW'></input> <br/>
-                Confirm Password: <input type='password' value={this.state.PassWord} id='myPW'></input>
-                <p>Password must be 8 characters minimum</p>
+                Name: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='text'></input> <br/>
+                Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text'></input> <br/>
+                Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='password' value={this.state.PassWord} id='myPW'></input> <br/>
+                Confirm Password:<input type='password' value={this.state.PassWord} id='myPW'></input>
+                <p>(Password must be 8 characters minimum)</p>
             </form> <br/>
-            <Link type='button' exact path to="/">Submit</Link>
+            <Link id='submit' type='button' exact path to="/">Submit</Link>
             {/* <button>Submit</button> */}
         </div>
         )
