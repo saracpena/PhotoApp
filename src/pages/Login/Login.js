@@ -15,7 +15,7 @@ class Login extends Component {
         },
         newUser: false
     };
-
+    
     handleChange = e => {
         this.setState(
             {
@@ -27,8 +27,9 @@ class Login extends Component {
     
     onSubmit = e =>{
      e.preventDefault()
-    
-
+        console.log(this.props)
+        this.props.history.push('/profile')
+        this.props.LogUser();
     }
 
     render(){
@@ -37,13 +38,14 @@ class Login extends Component {
                 <form onSubmit={this.onSubmit} className='login'>
                     Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='email' name='email'  value={this.state.email} onChange={this.handleChange}></input> <br/>
                     Password: <input id='myPW' type='password' name='password' value={this.state.password} onChange={this.handleChange} ></input>
-                </form> <br/>
                 <div className='login-register'>
                     {/* <Link id='login' type="button" to="/profile">Login</Link>&nbsp;&nbsp;&nbsp; */}
                     <button id='login' value='login'>Login</button>
-                    {/* <Link id='register' type="button" to="/register">Register</Link> */}
-                    <button id='register' value='newUser'>Register</button>
+                    <Link id='register' type="button" to="/register">Register</Link>
+                    {/* <button id='register' value='newUser'>Register</button> */}
                 </div>
+                </form> <br/>
+                
             </div>
         )
     }

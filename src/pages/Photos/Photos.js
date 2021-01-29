@@ -1,11 +1,14 @@
 import { Component } from 'react'
+import Pictures from '../../components/pictures/Pictures'
 
 class Photos extends Component {
     state={}
 
     render(){
         return(
-            <div></div>
+            <div>
+                <Pictures/>
+            </div>
         )
     }
 }

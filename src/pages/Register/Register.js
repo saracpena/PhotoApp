@@ -32,7 +32,7 @@ class Register extends Component {
                 Confirm Password:<input type='password' name='ConfirmPW' value={this.state.ConfirmPW} onChange={this.handleChange} ></input>
                 <p>(Password must be 8 characters minimum)</p>
             </form> <br/>
-            <Link id='submit' type='button' exact path to="/">Submit</Link>
+            <Link id='submit' type='button' to="/">Submit</Link>
             {/* <button>Submit</button> */}
         </div>
         )

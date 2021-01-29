@@ -1,56 +1,70 @@
 // React library import
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // Route & Redirect component import
-import { Route, Switch, Redirect } from 'react-router-dom';
-import {BrowserRouter as Router} from 'react-router-dom'
+import { Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 // Pages
-import Login from '../Login/Login'
-import Register from '../Register/Register'
-import Profile from '../Profile/Profile'
-import Photos from '../Photos/Photos'
-import Posts from '../Posts/Posts'
-import Settings from '../Settings/Settings'
+import Login from "../Login/Login";
+import Register from "../Register/Register";
+import Profile from "../Profile/Profile";
+import Photos from "../Photos/Photos";
+import Posts from "../Posts/Posts";
+import Settings from "../Settings/Settings";
 
 //CSS
-import './App.css';
+import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
+  state={
+    loggedIn:false
   }
+
+  LogUser = () => {
+    this.setState({loggedIn:!this.state.loggedIn})
+  } 
+
+
   render() {
-    
     return (
       <div className="App">
-        <div className='App-header-footer'>
-        <header>S W I P E &nbsp;&nbsp;&nbsp; R I G H T</header>
-        </div> <br/>
+        <div className="App-header-footer">
+          <header>S W I P E &nbsp;&nbsp;&nbsp; R I G H T</header>
+        </div>{" "}
+        <br />
         <Router>
-          <Switch> 
-            <Route exact path='/' component={Login}/>
-            <Route path='/register' component={Register}/>
-            <Route path='/register'>
-              <Redirect to='/'/>
+        
+          <Switch>
+            <Route exact path="/" render={(props) => <Login {...props} LogUser={this.LogUser} />} />
+            <Route
+              path="/register"
+              render={(props) => <Register {...props} LogUser={this.LogUser}/>}
+            />
+            <Route path="/register">
+              <Redirect to="/" />
             </Route>
-            <Route path='/profile' component={Profile}/>
-            <Route path='/posts' component={Posts}/>
-            <Route path='/photos' component={Photos}/>
-            <Route path='/settings' component ={Settings}/>
+            
+            {/* <Route path="/profile" component={Profile} /> */}
+            <Route path="/posts" component={Posts} />
+            <Route path="/photos" component={Photos} />
+            <Route path="/settings" component={Settings} />
           </Switch>
+          { this.state.loggedIn ? <Profile LogUser={this.LogUser}/> : <Redirect to='/'/>} 
         </Router>
-     </div>
+      </div>
     );
   }
 }
 
-export default App
+export default App;
 
-            {/* <Login />
+{
+  /* <Login />
             <Register />
             <Profile />
             <Pictures />
             <Favorites />
-            <Settings /> */}
+            <Settings /> */
+}
 // function App() {
 //   return (
 //     <div className="App">
@@ -74,11 +88,11 @@ export default App
 //   : ''
 //   }
 //   <header className='App-header-footer'>R E A C T &nbsp;&nbsp;&nbsp;  M A S T E R M I N D</header>
-  
+
 //   <Switch>
-//     <Route exact path='/' render={() => 
+//     <Route exact path='/' render={() =>
 //       <GamePage
-//           toggleInstructions={this.toggleInstructions} 
+//           toggleInstructions={this.toggleInstructions}
 //           winTries={winTries}
 //           colors={colors}
 //           selColorIdx={this.state.selColorIdx}
@@ -89,9 +103,7 @@ export default App
 //           handleScoreClick={this.handleScoreClick}
 //       />
 //     } />
-//   <Route path='/settings' render={(props) => 
+//   <Route path='/settings' render={(props) =>
 //       <SettingsPage {...props}/>
 //     } />
 //   </Switch>
-
-
