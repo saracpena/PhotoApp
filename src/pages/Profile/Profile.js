@@ -15,14 +15,14 @@ class Profile extends Component {
         <div className='header'>
             <h1>Welcome Back, Sara!</h1>
         <navbar className='navbar'>
-            <h6>Posts |</h6>
-            <h6>About |</h6>
-            <h6>Friends |</h6>
-            <h6>Photos |</h6>
-            <h6>Settings </h6>
+            <h6>Posts</h6>
+            <h6>About</h6>
+            <h6>Friends</h6>
+            <h6>Photos</h6>
+            <h6>Settings</h6>
         </navbar>
-        <navbar className='logout'>
-        <Link type='button' exact path to="/">logout</Link>
+        <navbar className='logout-link'>
+        <Link id='logout' type='button' exact path to="/">logout</Link>
         </navbar>
         </div>
     )}

@@ -36,15 +36,15 @@ class Login extends Component {
 
     render(){
         return(
-            <div className='login-Wrapper'>
+            <div className='login-wrapper'>
                 <form className='login'>
-                    Email: <input type='text' name='email'  value={this.state.email} onChange={this.handleChange}></input> <br/>
+                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' name='email'  value={this.state.email} onChange={this.handleChange}></input> <br/>
                     Password: <input id='myPW' type='password' name='password' value={this.state.password} onChange={this.handleChange} ></input>
                 </form> <br/>
-                <div>
-                    <Link type="button" to="/profile">Login</Link> <br/>
+                <div className='login-register'>
+                    <Link id='login' type="button" to="/profile">Login</Link>&nbsp;&nbsp;&nbsp;
                     {/* <button value='login'>Login</button> */}
-                    <Link type="button" to="/register">Register</Link>
+                    <Link id='register' type="button" to="/register">Register</Link>
                     {/* <button value='newUser'>Register</button> */}
                 </div>
             </div>
