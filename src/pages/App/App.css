@@ -4,7 +4,7 @@ body {
 /** App CSS **/
 
 .App-header-footer{
-  align-items: center;
+  text-align: center;
 }
 
 /** LOGIN CSS **/
@@ -21,9 +21,9 @@ input{
 .login-wrapper{
   color:white;
   position: relative;
-  padding: 6px 50px 6px 0;
-  margin: 25px 1px 0 1em;
-  background-color:#282c34;
+  padding: 10px 40px 15px 2em;
+  margin: 25px 180px 0 10em;
+  background:linear-gradient(to right,rgb(61, 61, 61) 0%,#222 100%);
   border: solid pink 3px;
 }
 
@@ -32,7 +32,7 @@ input{
   position: absolute;
   padding: 7px;
   width: 45px;
-  margin-left: -20px;
+  margin-left: -60px;
   margin-top: -8px;
   background-color:#282c34;
   font-weight: bolder;
@@ -43,13 +43,13 @@ input{
 }
 
 #login:active {
-  box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+  box-shadow:15px 10px 8px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
   background:linear-gradient(to right,#444 0%,#222 100%);
 }
 
 #register{
   position: absolute;
-  margin-left: 40px;
+  margin-left: 10px;
   margin-top: -8px;
   padding: 7px;
   background-color:#282c34;
@@ -60,7 +60,7 @@ input{
 }
 
 #register:active {
-  box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+  box-shadow:15px 10px 8px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
   background:linear-gradient(to right,#444 0%,#222 100%);
 }
 
@@ -70,12 +70,12 @@ input{
 .form{
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   color: white;
-  padding: 10px 15px 15px 10px;
+  padding: 10px 15px 20px 10px;
   margin: 25px 0 0 8em;
   border: solid pink 3px;
-  background-color: #282c34;
+  background:linear-gradient(to right,rgb(61, 61, 61) 0%,#222 100%);
 }
 
 p{
@@ -87,7 +87,7 @@ p{
   margin-left: 20px;
   padding: 7px;
   width: 45px;
-  background-color:#282c34;
+  background:#282c34;
   font-weight: bolder;
   font-size: 10px;
   color:blanchedalmond;
@@ -95,7 +95,7 @@ p{
 }
 
 #submit:active {
-  box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+  box-shadow: 15px 10px 8px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
   background:linear-gradient(to right,#444 0%,#222 100%);
 }
 
