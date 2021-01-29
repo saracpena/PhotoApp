@@ -31,9 +31,9 @@ input{
 
   position: absolute;
   padding: 7px;
-  width: 45px;
+  width: 55px;
   margin-left: -50px;
-  margin-top: -5px;
+  margin-top: 20px;
   background-color:#282c34;
   font-weight: bolder;
   justify-content: space-evenly;
@@ -50,7 +50,7 @@ input{
 #register{
   position: absolute;
   margin-left: 10px;
-  margin-top: -5px;
+  margin-top: 20px;
   padding: 7px;
   background-color:#282c34;
   font-weight: bolder;
