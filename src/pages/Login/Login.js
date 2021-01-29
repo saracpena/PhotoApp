@@ -24,28 +24,25 @@ class Login extends Component {
         )
         console.log(this.state);
     }
+    
+    onSubmit = e =>{
+     e.preventDefault()
+    
 
-    Password = () => {
-    const pw = document.getElementById("myPW");
-    if (pw.type === "password") {
-        pw.type = "text";
-        } else {
-        pw.type = "password";
-        }
     }
 
     render(){
         return(
             <div className='login-wrapper'>
-                <form className='login'>
-                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' name='email'  value={this.state.email} onChange={this.handleChange}></input> <br/>
+                <form onSubmit={this.onSubmit} className='login'>
+                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='email' name='email'  value={this.state.email} onChange={this.handleChange}></input> <br/>
                     Password: <input id='myPW' type='password' name='password' value={this.state.password} onChange={this.handleChange} ></input>
                 </form> <br/>
                 <div className='login-register'>
-                    <Link id='login' type="button" to="/profile">Login</Link>&nbsp;&nbsp;&nbsp;
-                    {/* <button value='login'>Login</button> */}
-                    <Link id='register' type="button" to="/register">Register</Link>
-                    {/* <button value='newUser'>Register</button> */}
+                    {/* <Link id='login' type="button" to="/profile">Login</Link>&nbsp;&nbsp;&nbsp; */}
+                    <button id='login' value='login'>Login</button>
+                    {/* <Link id='register' type="button" to="/register">Register</Link> */}
+                    <button id='register' value='newUser'>Register</button>
                 </div>
             </div>
         )

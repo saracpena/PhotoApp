@@ -20,32 +20,16 @@ class Register extends Component {
         )
         console.log(this.state);
     }
-    Password = () => {
-        const pw = document.getElementById("myPW");
-        if (pw.type === "password") {
-            pw.type = "text";
-        } else {
-            pw.type = "password";
-            }
-        }
-    ConfPassword = () => {
-        const pw = document.getElementById("myPW");
-        if (pw.type === "password") {
-            pw.type = "text";
-        } else {
-            pw.type = "password";
-            }
-        }
-
+    
     render(){
         return(
             <div className='form'>
             <header>S I G N - U P</header> <br/>
             <form>
                 Name: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='text'></input> <br/>
-                Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text'></input> <br/>
+                Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='email'></input> <br/>
                 Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='password' name='password' value={this.state.password} onChange={this.handleChange}></input><br/>
-                Confirm Password:<input type='password' name='password' value={this.state.password} onChange={this.handleChange} ></input>
+                Confirm Password:<input type='password' name='ConfirmPW' value={this.state.ConfirmPW} onChange={this.handleChange} ></input>
                 <p>(Password must be 8 characters minimum)</p>
             </form> <br/>
             <Link id='submit' type='button' exact path to="/">Submit</Link>

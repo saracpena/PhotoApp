@@ -20,9 +20,9 @@ input{
 
 .login-wrapper{
   color:white;
-  position: relative;
+  position: absolute;
   padding: 10px 40px 15px 2em;
-  margin: 25px 180px 0 10em;
+  margin: 25px 180px 0 12em;
   background:linear-gradient(to right,rgb(61, 61, 61) 0%,#222 100%);
   border: solid pink 3px;
 }
@@ -32,8 +32,8 @@ input{
   position: absolute;
   padding: 7px;
   width: 45px;
-  margin-left: -60px;
-  margin-top: -8px;
+  margin-left: -50px;
+  margin-top: -5px;
   background-color:#282c34;
   font-weight: bolder;
   justify-content: space-evenly;
@@ -50,7 +50,7 @@ input{
 #register{
   position: absolute;
   margin-left: 10px;
-  margin-top: -8px;
+  margin-top: -5px;
   padding: 7px;
   background-color:#282c34;
   font-weight: bolder;
