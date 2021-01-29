@@ -1,4 +1,7 @@
 import { Component } from 'react'
+import { Link } from 'react-router-dom'
+// Pages
+import Login from '../Login/Login'
 
 
 class Register extends Component {
@@ -9,14 +12,14 @@ class Register extends Component {
         ConfirmPW:''
     }
 
-Password = () => {
-    const pw = document.getElementById("myPW");
-    if (pw.type === "password") {
-        pw.type = "text";
-    } else {
-        pw.type = "password";
+    Password = () => {
+        const pw = document.getElementById("myPW");
+        if (pw.type === "password") {
+            pw.type = "text";
+        } else {
+            pw.type = "password";
+            }
         }
-    }
 
     render(){
         return(
@@ -29,7 +32,8 @@ Password = () => {
                 Confirm Password: <input type='password' value={this.state.PassWord} id='myPW'></input>
                 <p>Password must be 8 characters minimum</p>
             </form> <br/>
-            <button>Submit</button>
+            <Link type='button' exact path to="/">Submit</Link>
+            {/* <button>Submit</button> */}
         </div>
         )
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Profile extends Component {
     state={
@@ -11,16 +12,18 @@ class Profile extends Component {
     render(){
 
     return ( 
-        <div>
+        <div className='header'>
             <h1>Welcome Back, Sara!</h1>
-        <navbar>
-            <h6>Posts</h6>
-            <h6>About</h6>
-            <h6>Friends</h6>
-            <h6>Photos</h6>
-            <h6>Settings</h6>
+        <navbar className='navbar'>
+            <h6>Posts |</h6>
+            <h6>About |</h6>
+            <h6>Friends |</h6>
+            <h6>Photos |</h6>
+            <h6>Settings </h6>
         </navbar>
-
+        <navbar className='logout'>
+        <Link type='button' exact path to="/">logout</Link>
+        </navbar>
         </div>
     )}
     }
