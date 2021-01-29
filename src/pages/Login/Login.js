@@ -1,8 +1,5 @@
-import React, { Component } from 'react'
-// Routing
-import { Route, Switch } from 'react-router-dom'
-import {BrowserRouter as Router} from 'react-router-dom'
-import { Redirect } from "react-router-dom";
+import { Component } from 'react'
+
 // Redux Store
 // import store from '../store';
 

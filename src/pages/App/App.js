@@ -1,10 +1,9 @@
 // React library import
 import React, { Component } from 'react';
-// Route component import
-import { Route, Switch } from 'react-router-dom'
+// Route & Redirect component import
+import { Route, Switch, Redirect } from 'react-router-dom';
 import {BrowserRouter as Router} from 'react-router-dom'
-//import {Redirect} from 'react-router-dom'
-//Pages
+// Pages
 import Login from '../Login/Login'
 import Register from '../Register/Register'
 import Profile from '../Profile/Profile'
@@ -14,7 +13,6 @@ import Settings from '../Settings/Settings'
 
 //CSS
 import './App.css';
-
 
 class App extends Component {
   constructor() {
@@ -31,6 +29,9 @@ class App extends Component {
           <Switch> 
             <Route exact path='/' component={Login}/>
             <Route path='/register' component={Register}/>
+            <Route path='/register'>
+              <Redirect to='/'/>
+            </Route>
             <Route path='/profile' component={Profile}/>
             <Route path='/posts' component={Posts}/>
             <Route path='/photos' component={Photos}/>
