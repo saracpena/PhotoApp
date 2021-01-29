@@ -12,19 +12,26 @@ body {
 
 
 input{
-  margin: 5px 0 1px 1em;
-  border: 2px solid black;
+  margin: 5px 0 1px .5em;
+  border: 1px solid black;
   justify-content: space-evenly;
 }
 
+.login{
+  padding: 1px 50px 6px 6px;
+  margin: 25px 10em 0 8em;
+  border: solid pink 3px;
+}
+
 #login{
-  margin: 0 0 0 5em;
+
   padding: 7px;
   background-color:#282c34;
   font-weight: bolder;
   justify-content: space-evenly;
   font-size: 10px;
   color:blanchedalmond;
+  border: solid pink 2px;
 }
 
 #register{
@@ -34,6 +41,7 @@ input{
   justify-content: space-evenly;
   font-size: 10px;
   color:blanchedalmond;
+  border: solid pink 2px;
 }
 
 
@@ -41,10 +49,10 @@ input{
 
 form{
   color: white;
-  margin: 5px 0 1px 1em;
-  padding: 10px 80px 10px 0;
+  padding: 10px 100px 6px 10px;
+  margin: 25px 5em 0 6em;
+  border: solid pink 3px;
   justify-content: space-evenly;
-  border: solid black 2px;
   background-color: #282c34;
 }
 
@@ -55,11 +63,12 @@ p{
 
 #submit{
   padding: 7px;
+  margin: 25px 12em 0 15em;
   background-color:#282c34;
   font-weight: bolder;
-  justify-content: space-evenly;
   font-size: 10px;
   color:blanchedalmond;
+  border: solid pink 2px;
 }
 
 /** PROFILE CSS **/
