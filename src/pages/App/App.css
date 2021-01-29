@@ -54,11 +54,11 @@ input{
 /** REGISTER CSS **/
 
 form{
+  position: absolute;
   color: white;
   padding: 10px 100px 6px 10px;
   margin: 25px 5em 0 6em;
   border: solid pink 3px;
-  justify-content: space-evenly;
   background-color: #282c34;
 }
 
@@ -68,8 +68,11 @@ p{
 }
 
 #submit{
+  position: absolute;
   padding: 7px;
-  margin: 25px 12em 0 15em;
+  width: 45px;
+  margin-top: 190px;
+  margin-left: -20px;
   background-color:#282c34;
   font-weight: bolder;
   font-size: 10px;
