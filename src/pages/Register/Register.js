@@ -28,10 +28,18 @@ class Register extends Component {
             pw.type = "password";
             }
         }
+    ConfPassword = () => {
+        const pw = document.getElementById("myPW");
+        if (pw.type === "password") {
+            pw.type = "text";
+        } else {
+            pw.type = "password";
+            }
+        }
 
     render(){
         return(
-            <div>
+            <div className='form'>
             <header>S I G N - U P</header> <br/>
             <form>
                 Name: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='text'></input> <br/>

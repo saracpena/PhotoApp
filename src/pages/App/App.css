@@ -18,10 +18,12 @@ input{
  
 }
 
-.login{
+.login-wrapper{
+  color:white;
   position: relative;
   padding: 6px 50px 6px 0;
   margin: 25px 1px 0 1em;
+  background-color:#282c34;
   border: solid pink 3px;
 }
 
@@ -30,7 +32,8 @@ input{
   position: absolute;
   padding: 7px;
   width: 45px;
-  margin-left: -40px;
+  margin-left: -20px;
+  margin-top: -8px;
   background-color:#282c34;
   font-weight: bolder;
   justify-content: space-evenly;
@@ -41,7 +44,8 @@ input{
 
 #register{
   position: absolute;
-  margin: 0 0 0 3em;
+  margin-left: 40px;
+  margin-top: -8px;
   padding: 7px;
   background-color:#282c34;
   font-weight: bolder;
@@ -53,11 +57,12 @@ input{
 
 /** REGISTER CSS **/
 
-form{
-  position: absolute;
+.form{
+  justify-content: center;
+  position: fixed;
   color: white;
   padding: 10px 100px 6px 10px;
-  margin: 25px 5em 0 6em;
+  margin: 25px 0 0 8em;
   border: solid pink 3px;
   background-color: #282c34;
 }
@@ -68,11 +73,10 @@ p{
 }
 
 #submit{
-  position: absolute;
+
+  margin: 0 0 50px 8em;
   padding: 7px;
   width: 45px;
-  margin-top: 190px;
-  margin-left: -20px;
   background-color:#282c34;
   font-weight: bolder;
   font-size: 10px;
