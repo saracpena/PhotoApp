@@ -42,6 +42,11 @@ input{
   border: solid pink 2px;
 }
 
+#login:active {
+  box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+  background:linear-gradient(to right,#444 0%,#222 100%);
+}
+
 #register{
   position: absolute;
   margin-left: 40px;
@@ -52,6 +57,11 @@ input{
   font-size: 10px;
   color:blanchedalmond;
   border: solid pink 2px;
+}
+
+#register:active {
+  box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+  background:linear-gradient(to right,#444 0%,#222 100%);
 }
 
 
@@ -82,6 +92,11 @@ p{
   font-size: 10px;
   color:blanchedalmond;
   border: solid pink 2px;
+}
+
+#submit:active {
+  box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+  background:linear-gradient(to right,#444 0%,#222 100%);
 }
 
 /** PROFILE CSS **/
