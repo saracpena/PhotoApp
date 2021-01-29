@@ -8,8 +8,8 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import Login from '../Login/Login'
 import Register from '../Register/Register'
 import Profile from '../Profile/Profile'
-import Pictures from '../../components/pictures/Pictures'
-import Favorites from '../Photos/Photos'
+import Photos from '../Photos/Photos'
+import Posts from '../Posts/Posts'
 import Settings from '../Settings/Settings'
 
 //CSS
@@ -29,8 +29,12 @@ class App extends Component {
         </div> <br/>
         <Router>
           <Switch> 
-            <Route path='/login' Login={Login}/>
-            <Route path='/register' Register={Register}/>
+            <Route exact path='/' component={Login}/>
+            <Route path='/register' component={Register}/>
+            <Route path='/profile' component={Profile}/>
+            <Route path='/posts' component={Posts}/>
+            <Route path='/photos' component={Photos}/>
+            <Route path='/settings' component ={Settings}/>
           </Switch>
         </Router>
      </div>

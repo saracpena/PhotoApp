@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // Routing
-import { Link, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import {BrowserRouter as Router} from 'react-router-dom'
 import { Redirect } from "react-router-dom";
 // Redux Store
@@ -17,7 +17,7 @@ class Login extends Component {
         newUser: false
     };
 
-    handleChange = (e) => {
+    handleChange = e => {
         this.setState(
             {
             [e.target.name]: e.target.value
