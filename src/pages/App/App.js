@@ -32,7 +32,7 @@ class App extends Component {
         </div>{" "}
         <br />
         <Router>
-        
+        <Route path="/photos" component={Photos} />
           <Switch>
             <Route exact path="/" render={(props) => <Login {...props} LogUser={this.LogUser} />} />
             <Route
@@ -45,10 +45,11 @@ class App extends Component {
             
             {/* <Route path="/profile" component={Profile} /> */}
             <Route path="/posts" component={Posts} />
-            <Route path="/photos" component={Photos} />
+            {/* <Route path="/photos" component={Photos} /> */}
             <Route path="/settings" component={Settings} />
           </Switch>
           { this.state.loggedIn ? <Profile LogUser={this.LogUser}/> : <Redirect to='/'/>} 
+          
         </Router>
       </div>
     );

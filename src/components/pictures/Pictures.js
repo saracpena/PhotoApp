@@ -5,7 +5,7 @@ class Pictures extends Component {
         url: "https://api.unsplash.com/search/photos?query=",
         client: "&client_id=",
         ApiKey: '4Td5E2a6XM5sjB2AZkjTeMY86YfEo8HsL1pqfesoHXU',
-        input:'',
+        input:'coffee',
         data: '',
         currentImg: []
     }
@@ -18,11 +18,9 @@ class Pictures extends Component {
         )
     }
 
-    handleSubmit = (e) => {
-       e.preventDefault()
-       const Api = this.state.url + this.state.input + this.state.client + this.state.ApiKey
-       console.log(Api);
-       fetch(Api)
+    componentDidMount(){
+        const Api = this.state.url + this.state.input + this.state.client + this.state.ApiKey
+        fetch(Api)
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
@@ -30,15 +28,28 @@ class Pictures extends Component {
         })
     }
 
+    // handleSubmit = (e) => {
+    //    e.preventDefault()
+    //    const Api = this.state.url + this.state.input + this.state.client + this.state.ApiKey
+    //    console.log(Api);
+    //    fetch(Api)
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         console.log(data);
+    //         this.setState({data, currentImg: data.results})
+    //     })
+    // }
+
+    
     render() {
         return(
-            <div>
-                <form>
+            <div className='photos-container'>
+                {/* <form>
                     <input onChange={this.handleChange} value={this.state.input}></input>
                     <button onClick={this.handleSubmit}>submit</button>
-                </form>
+                </form> */}
                 { this.state.currentImg.map((image,index) => <img key={index} src={image.urls.thumb} />)}
-            </div>
+            </div>    
         )    
     }
 }

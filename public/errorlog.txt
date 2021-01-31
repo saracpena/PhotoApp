@@ -1,0 +1,19 @@
+1. Why is my api showing up in <header> instead of body?
+2. How to auto render pictures in "photos" nav bar link with date uploaded, num of likes,
+Retrieve photo dates from API 
+
+REDUX:
+    Actions Folder
+        • add pictures
+        • delete pictures
+        • like/unlike pictures
+        • post/delete comments
+        • 
+    Reducers Folder
+        • include a fail-safe default: return state
+
+    dispatch() will be called in components
+
+// Photos.js (page)/Pictures.js(component) currently rendering outside of of 'body', create some container to keep it inside profile body
+
+default: return state; keeps our code from "blowing up"

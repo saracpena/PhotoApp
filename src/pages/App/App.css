@@ -9,10 +9,9 @@ body {
 
 /** LOGIN CSS **/
 
-
-
 input{
-  margin: 5px 0 1px .5em;
+  
+  margin: 8px 0 1px 1em;
   border: 1px solid black;
   position: relative;
  
@@ -28,12 +27,12 @@ input{
 }
 
 #login{
-
+  text-decoration: underline;
   position: absolute;
-  padding: 7px;
+  padding: 5px;
   width: 55px;
-  margin-left: -50px;
-  margin-top: 20px;
+  margin-left: -20px;
+  margin-top: 15px;
   background-color:#282c34;
   font-weight: bolder;
   justify-content: space-evenly;
@@ -47,11 +46,16 @@ input{
   background:linear-gradient(to right,#444 0%,#222 100%);
 }
 
+#signup{
+  text-align: center;
+  line-height: 8px;
+}
+
 #register{
   position: absolute;
-  margin-left: 10px;
-  margin-top: 20px;
-  padding: 7px;
+  margin-left: -15px;
+  margin-top: 50px;
+  padding: 5px;
   background-color:#282c34;
   font-weight: bolder;
   font-size: 10px;
@@ -68,8 +72,7 @@ input{
 /** REGISTER CSS **/
 
 .form{
-  justify-content: center;
-  align-items: center;
+
   position: fixed;
   color: white;
   padding: 10px 15px 20px 10px;

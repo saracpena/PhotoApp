@@ -40,8 +40,9 @@ class Login extends Component {
                     Password: <input id='myPW' type='password' name='password' value={this.state.password} onChange={this.handleChange} ></input>
                 <div className='login-register'>
                     {/* <Link id='login' type="button" to="/profile">Login</Link>&nbsp;&nbsp;&nbsp; */}
-                    <button id='login' value='login'>Login</button>
+                    <button id='login' value='login'>Login</button><br/>
                     <Link id='register' type="button" to="/register">Register</Link>
+                    &nbsp;&nbsp;<p id='signup'>Not a user? Sign-up!</p>
                     {/* <button id='register' value='newUser'>Register</button> */}
                 </div>
                 </form> <br/>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import Pictures from '../../components/pictures/Pictures'
+import { Link, Route } from 'react-router-dom'
+import Photos from '../../components/pictures/Pictures'
 
 class Profile extends Component {
     state={
@@ -30,6 +30,11 @@ class Profile extends Component {
         {/* <Link id='logout' type='button' exact path to="/">logout</Link> */}
         <button onClick={this.logout}>logout</button>
         </nav>
+        <div className='container'>
+            {/* <Route exact path to='/photos' render={(props)} => <Photos {...this.props}/>
+        
+            </Route> */}
+        </div>
         </div>
     )}
     }
