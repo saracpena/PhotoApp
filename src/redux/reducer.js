@@ -21,6 +21,11 @@ export default function reducer(state = [], action) {
         user.id !== action.payload.id ? user : { ...user, login: false }
       );
 
+    case actions.USER_LOGOUT:
+      return state.map((user) =>
+        user.id !== action.payload.id ? user : { ...user, login: true }
+      );
+
     default:
       return state;
   }
