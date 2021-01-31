@@ -1,6 +1,6 @@
 // [] is representing my Store i.e. data
 // When dealing with multiple action types
-import * as actions from "../actions/actionTypes";
+import * as actions from "./actions/actionTypes";
 
 export default function reducer(state = [], action) {
   switch (action.type) {
