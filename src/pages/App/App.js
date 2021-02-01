@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header-footer">
-          <header>S W I P E &nbsp;&nbsp;&nbsp; R I G H T</header>
+          <header>J A Z Z &nbsp;&nbsp;&nbsp; C L U B </header>
         </div>{" "}
         <br />
         <Router>

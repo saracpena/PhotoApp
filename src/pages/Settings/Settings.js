@@ -21,9 +21,11 @@ class Register extends Component {
     }
     deleteAccount = e =>{
         e.preventDefault()
-           console.log(this.props)
-           this.props.history.push('/profile')
-           this.props.LogUser();
+        if (confirm("Permanently Delete Account!")) {
+            txt = "Account Deleted!";
+        } else {
+            txt = "You canceled action!";
+        }
        }
     
 
@@ -32,8 +34,8 @@ class Register extends Component {
             <div className='form'>
             <p>D E L E T E &nbsp;&nbsp;&nbsp; A C C O U N T</p> <br/>
             <Link id='submit' type='button' to="/">Delete Account</Link>
-            {/* <button>Submit</button> */}
-            <button onClick="deleteAccount()">Submit    </button>
+            
+            <button onClick="deleteAccount()">Submit</button>
             
         </div>
         )

@@ -15,7 +15,7 @@ class Photos extends Component {
         url: "https://api.unsplash.com/search/photos?query=",
         client: "&client_id=",
         ApiKey: '4Td5E2a6XM5sjB2AZkjTeMY86YfEo8HsL1pqfesoHXU',
-        input:'coffee',
+        input:'',
         data: '',
         currentImg: []
     }
