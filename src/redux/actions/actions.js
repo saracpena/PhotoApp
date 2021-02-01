@@ -1,20 +1,64 @@
-import * as actions from './actions/actionTypes'
+import * as actions from './ActionTypes'
 
-
-export const userAdded = description => ({
+//! REGISTER Successful
+export const userAdded = item => ({
    type: actions.USER_ADDED,
-   payload: {
-   description
- }
+   payload: item
 })
-// description : "User1"
-export const userLogin = id => ({
+//! LOGIN Successful
+export const userLogin = item => ({
     type: actions.USER_LOGIN,
-    payload: {
-       id
-    }
+    payload: item
 })
 
+//! LOGOUT Successful
+
+export const userLogin = item => ({
+   type: actions.USER_LOGOUT,
+   payload: item
+})
+
+//! DELETE Account
+
+export const userLogin = item => ({
+   type: actions.USER_REMOVED,
+   payload: item
+})
+
+//! ADD Comment
+// export const ADD_COMMENT = 'addComment'
+
+export const addComment = item => ({
+    type: ADD_COMMENT,
+    payload: item
+})
+
+//! REMOVE Comment
+// export const REMOVE_COMMENT = 'deleteComment'
+
+export const removeComment = item => ({
+    type: REMOVE_COMMENT,
+    payload: item
+})
+
+//! ADD Photo
+// export const ADD_PHOTO = 'addPhoto'
+
+// ACTION CREATOR 
+export const addPhoto = (item) => ({
+    type: ADD_PHOTO,
+    payload: item
+})
+//! REMOVE Photo
+// export const REMOVE_PHOTO = 'removePhoto'
+
+// ACTION CREATOR 
+export const removePhoto = (item) => ({
+    type: REMOVE_PHOTO,
+    payload: item
+})
+
+// Another way to    
 // export default function userAdded(description){
 //     return {
 //      type: actions.USER_ADDED,

@@ -17,3 +17,16 @@ REDUX:
 // Photos.js (page)/Pictures.js(component) currently rendering outside of of 'body', create some container to keep it inside profile body
 
 default: return state; keeps our code from "blowing up"
+
+## January 30, 2021 10:55PM,
+    • Failed to compile
+./src/redux/store.js
+Module not found: Can't resolve '../reducer/reducer' in '/Users/groovequeen/Desktop/photo_app/src/redux'
+This error occurred during the build time and cannot be dismissed.
+===RESOLVED 11:15pm reconfigured folder/file convention
+
+    •Failed to compile 11:20PM
+src/redux/reducer.js
+  Line 11:17:  'lastId' is not defined  no-undef
+  Line 17:14:  'store' is not defined   no-undef
+

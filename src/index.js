@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import store from './redux/store'
+import index from './redux/store'
 import './index.css';
 import { userAdded, userLogin } from './redux/actions/actions'
 import App from './pages/App/App';
