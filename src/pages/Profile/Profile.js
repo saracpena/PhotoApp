@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Link, Route } from 'react-router-dom'
-import Photos from '../../components/pictures/Pictures'
+// import { Link, Route } from 'react-router-dom'
+// import Photos from '../../components/pictures/Pictures'
 
 class Profile extends Component {
     state={

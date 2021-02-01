@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Profile from "../Profile/Profile";
-import Photos from "../Photos/Photos";
+import Photos from "../Favorites/Favorites";
 import Posts from "../Posts/Posts";
 import Settings from "../Settings/Settings";
 

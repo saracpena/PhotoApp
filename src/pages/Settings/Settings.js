@@ -8,8 +8,7 @@ class Register extends Component {
     state={
         Name:'',
         Email:'',
-        PassWord:'',
-        ConfirmPW:''
+        PassWord:''
     }
 
     handleChange = e => {
@@ -20,20 +19,22 @@ class Register extends Component {
         )
         console.log(this.state);
     }
+    deleteAccount = e =>{
+        e.preventDefault()
+           console.log(this.props)
+           this.props.history.push('/profile')
+           this.props.LogUser();
+       }
     
+
     render(){
         return(
             <div className='form'>
-            <header>S I G N - U P</header> <br/>
-            <form>
-                Name: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type='text'></input> <br/>
-                Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='email'></input> <br/>
-                Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='password' name='password' value={this.state.password} onChange={this.handleChange}></input><br/>
-                Confirm Password:<input type='password' name='ConfirmPW' value={this.state.ConfirmPW} onChange={this.handleChange} ></input>
-                <p>(Password must be 8 characters minimum)</p>
-            </form> <br/>
-            <Link id='submit' type='button' to="/">Submit</Link>
+            <p>D E L E T E &nbsp;&nbsp;&nbsp; A C C O U N T</p> <br/>
+            <Link id='submit' type='button' to="/">Delete Account</Link>
             {/* <button>Submit</button> */}
+            <button onClick="deleteAccount()">Submit    </button>
+            
         </div>
         )
     }

@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import index from './redux/store'
+import index from './redux'
 import './index.css';
 import { userAdded, userLogin } from './redux/actions/actions'
 import App from './pages/App/App';
 
-store.dispatch(userAdded("User1"));
-store.dispatch(userLogin(1));
+
 
 // subscribe gives updates, getState gets 'new' status maintaining functions in reducer pure
 const unsubscribe = store.subscribe(() => {

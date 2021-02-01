@@ -1,4 +1,4 @@
-import Pictures from '../Pictures';
+import Photos from '../Photos';
 
 const users = [
     {
@@ -69,7 +69,7 @@ const users = [
     {
         'name': 'Miles Davis',
         'email': 'miles@davis.com',
-        'password': '143Davis',
+        'password': 'Miles123',
         'isLoggedIn': false,
         'favorites': ['Ray Bass', 'Ella Solo 1', 'Miles Gig 2'],
         'picture' : [

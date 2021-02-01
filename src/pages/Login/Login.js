@@ -36,8 +36,8 @@ class Login extends Component {
         return(
             <div className='login-wrapper'>
                 <form onSubmit={this.onSubmit} className='login'>
-                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='email' name='email'  value={this.state.email} onChange={this.handleChange}></input> <br/>
-                    Password: <input id='myPW' type='password' name='password' value={this.state.password} onChange={this.handleChange} ></input>
+                    <input type='email' name='email' placeholder="Email"  value={this.state.email} onChange={this.handleChange}></input> <br/>
+                    <input id='myPW' type='password' placeholder='Password' name='password' value={this.state.password} onChange={this.handleChange} ></input>
                 <div className='login-register'>
                     {/* <Link id='login' type="button" to="/profile">Login</Link>&nbsp;&nbsp;&nbsp; */}
                     <button id='login' value='login'>Login</button><br/>
@@ -51,6 +51,20 @@ class Login extends Component {
         )
     }
 }
+
+// create a copy of the props to make them accessible for this component
+const mapStateToProps = (state) => ({
+    // trigger the action - > call the reducer -> reducer will change the state
+    users: state.users.users
+  })
+
+  // Adds a prop called "LoginStatus" which is a function that takes in a payload
+  // then dispatches payload to the action creator: "login"
+  const mapDispatchToProps = (dispatch) => ({
+    LoginStatus : item => dispatch(login(item))
+  })
+
+// store.dispatch(userLogin(item));
 
 export default Login
 

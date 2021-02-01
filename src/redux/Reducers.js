@@ -1,7 +1,7 @@
 // [] is representing my Store i.e. data
 // When dealing with multiple action types
 import * as actions from "./ActionTypes";
-import posts from "../redux/UserPosts";
+import posts from "./User Posts";
 import users from "../redux/Users";
 
 export const initialState = {
