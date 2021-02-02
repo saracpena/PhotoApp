@@ -1,4 +1,4 @@
-import Photos from '../Photos';
+// import Pictures from '../Pictures/BrownElla.jpg'
 
 const users = [
     {
@@ -12,7 +12,7 @@ const users = [
                 'name': 'Ella and I',
                 'date': '01/15/2021',
                 'likes': 455030,
-                'source': '../Pictures/BrownElla',
+                'source': '../Pictures/BrownElla.jpg',
                 'profile': true,
                 
             },

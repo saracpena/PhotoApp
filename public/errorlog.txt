@@ -32,4 +32,4 @@ src/redux/reducer.js
 
 After buidling Redux files, project ceased to compile.
 
-Code Settings and its features
+Code Settings Page and its features

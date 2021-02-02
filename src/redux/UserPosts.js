@@ -1,5 +1,5 @@
-import Photos from '../Photos';
-import Users from '../redux/Users';
+// import Photos from '../Photos';
+// import Users from '../redux/Users';
 
 const UserPosts = [
     {

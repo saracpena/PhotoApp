@@ -21,10 +21,12 @@ class Settings extends Component {
     }
     deleteAccount = e =>{
         e.preventDefault()
-        if (confirm("Permanently Delete Account!")) {
-            txt = "Account Deleted!";
+        let confirm = confirm("Permanently Delete Account!")
+        let alert;
+        if (confirm) {
+            alert = "Account Deleted!";
         } else {
-            txt = "You canceled action!";
+            alert = "You canceled action!";
         }
        }
     

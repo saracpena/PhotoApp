@@ -40,6 +40,5 @@ class Register extends Component {
         )
     }
 }
-store.dispatch(userAdded("item"));
 
 export default Register

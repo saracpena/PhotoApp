@@ -13,14 +13,14 @@ export const userLogin = item => ({
 
 //! LOGOUT Successful
 
-export const userLogin = item => ({
+export const userLogout = item => ({
    type: actions.USER_LOGOUT,
    payload: item
 })
 
 //! DELETE Account
 
-export const userLogin = item => ({
+export const userRemoved = item => ({
    type: actions.USER_REMOVED,
    payload: item
 })
@@ -29,7 +29,7 @@ export const userLogin = item => ({
 // export const ADD_COMMENT = 'addComment'
 
 export const addComment = item => ({
-    type: ADD_COMMENT,
+    type: actions.ADD_COMMENT,
     payload: item
 })
 
@@ -37,7 +37,7 @@ export const addComment = item => ({
 // export const REMOVE_COMMENT = 'deleteComment'
 
 export const removeComment = item => ({
-    type: REMOVE_COMMENT,
+    type: actions.REMOVE_COMMENT,
     payload: item
 })
 
@@ -46,7 +46,7 @@ export const removeComment = item => ({
 
 // ACTION CREATOR 
 export const addPhoto = (item) => ({
-    type: ADD_PHOTO,
+    type: actions.ADD_PHOTO,
     payload: item
 })
 //! REMOVE Photo
@@ -54,7 +54,7 @@ export const addPhoto = (item) => ({
 
 // ACTION CREATOR 
 export const removePhoto = (item) => ({
-    type: REMOVE_PHOTO,
+    type: actions.REMOVE_PHOTO,
     payload: item
 })
 

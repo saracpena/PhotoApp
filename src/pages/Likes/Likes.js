@@ -1,11 +1,11 @@
 import { Component } from 'react';
-import Pictures from '../../components/pictures/Pictures';
-import BrownElla from '../../Pictures/BrownElla';
-import RayBass from '../../Pictures/RayBass';
-import YoungRay from '../../Pictures/YoungRay';
-import EllaGig from '../../Pictures/EllaGig';
+// import Pictures from '../../components/Images/Pictures';
+import BrownElla from '../../Pictures/BrownElla.jpg';
+import RayBass from '../../Pictures/RayBass.jpg';
+import YoungRay from '../../Pictures/YoungRay.jpg';
+import EllaGig from '../../Pictures/EllaGig.jpg';
 import EllaSolo from '../../Pictures/EllaSolo.jpg';
-import EllaMarylin from '../../Pictures/EllaMarylin';
+import EllaMarylin from '../../Pictures/EllaMarylin.png';
 import Davis from '../../Pictures/Davis.jpg';
 import Miles from '../../Pictures/Miles.jpg';
 import MilesSolo from '../../Pictures/MilesSolo.jpg';

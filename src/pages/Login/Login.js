@@ -2,6 +2,8 @@ import { Component } from 'react'
 import { Link } from 'react-router-dom'
 // Page
 import Register from '../Register/Register'
+import { userLogin } from '../../redux/actions/Actions'
+import {connect} from 'react-redux'
 
 // Redux Store
 // import store from '../store';
@@ -33,6 +35,7 @@ class Login extends Component {
     }
 
     render(){
+        console.log(this.props);
         return(
             <div className='login-wrapper'>
                 <form onSubmit={this.onSubmit} className='login'>
@@ -55,18 +58,18 @@ class Login extends Component {
 // create a copy of the props to make them accessible for this component
 const mapStateToProps = (state) => ({
     // trigger the action - > call the reducer -> reducer will change the state
-    users: state.users.users
+    users: state.users
   })
 
   // Adds a prop called "LoginStatus" which is a function that takes in a payload
   // then dispatches payload to the action creator: "login"
   const mapDispatchToProps = (dispatch) => ({
-    LoginStatus : item => dispatch(login(item))
+    LoginStatus : item => dispatch(userLogin(item))
   })
 
 // store.dispatch(userLogin(item));
 
-export default Login
+export default connect(mapStateToProps,mapDispatchToProps) (Login)
 
     // handleChange = e => {
     //     const newLogin = { ...this.state.login };
