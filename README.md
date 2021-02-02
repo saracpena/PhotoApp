@@ -1,6 +1,7 @@
 # PhotoApp Framework
 
-![PhotoApp](https://giphy.com/embed/1DaXuuDJFcoeYbEED1)
+![PhotoApp](https://media.giphy.com/media/1DaXuuDJFcoeYbEED1/giphy.gif)
+
 
 
 
