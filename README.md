@@ -1,9 +1,5 @@
-https://giphy.com/gifs/1DaXuuDJFcoeYbEED1/html5
 
-https://media.giphy.com/media/1DaXuuDJFcoeYbEED1/giphy.gif
-
-
-
+![](1DaXuuDJFcoeYbEED1.gif)
 
 # Getting Started with Create React App
 
