@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Login from '../Login/Login'
 
 
-class Register extends Component {
+class Settings extends Component {
     state={
         Name:'',
         Email:'',
@@ -43,4 +43,4 @@ class Register extends Component {
 }
 
 
-export default Register
+export default Settings

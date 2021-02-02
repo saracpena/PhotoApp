@@ -30,3 +30,6 @@ src/redux/reducer.js
   Line 11:17:  'lastId' is not defined  no-undef
   Line 17:14:  'store' is not defined   no-undef
 
+After buidling Redux files, project ceased to compile.
+
+Code Settings and its features

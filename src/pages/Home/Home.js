@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import { Link, Route } from 'react-router-dom'
 // import Photos from '../../components/pictures/Pictures'
 
-class Profile extends Component {
+class Home extends Component {
     state={
         avatar:'',
         name:'',
@@ -20,9 +20,9 @@ class Profile extends Component {
         <div className='header'>
             <h1>Welcome Back, Sara!</h1>
         <nav className='navbar'>
+            <h6>Home</h6>
             <h6>Posts</h6>
-            <h6>About</h6>
-            <h6>Friends</h6>
+            <h6>Likes</h6>
             <Link to='/photos'><h6>Photos</h6></Link>
             <h6>Settings</h6>
         </nav>
@@ -39,7 +39,7 @@ class Profile extends Component {
     )}
     }
 
-export default Profile
+export default Home
 
 //! Render a new welcome message and render name of User.
 // i.e. "{ Random new message }" with API? {this.state.name}"

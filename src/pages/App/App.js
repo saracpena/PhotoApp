@@ -6,9 +6,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 // Pages
 import Login from "../Login/Login";
 import Register from "../Register/Register";
-import Profile from "../Profile/Profile";
-import Photos from "../Favorites/Favorites";
+import Home from "../Home/Home";
 import Posts from "../Posts/Posts";
+import Likes from "../Likes/Likes";
 import Settings from "../Settings/Settings";
 
 //CSS
@@ -32,7 +32,7 @@ class App extends Component {
         </div>{" "}
         <br />
         <Router>
-        <Route path="/photos" component={Photos} />
+        <Route path="/likes" component={Likes} />
           <Switch>
             <Route exact path="/" render={(props) => <Login {...props} LogUser={this.LogUser} />} />
             <Route
@@ -43,12 +43,12 @@ class App extends Component {
               <Redirect to="/" />
             </Route>
             
-            {/* <Route path="/profile" component={Profile} /> */}
+            {/* <Route path="/Home" component={Home} /> */}
             <Route path="/posts" component={Posts} />
-            {/* <Route path="/photos" component={Photos} /> */}
+            {/* <Route path="/likes" component={Likes} /> */}
             <Route path="/settings" component={Settings} />
           </Switch>
-          { this.state.loggedIn ? <Profile LogUser={this.LogUser}/> : <Redirect to='/'/>} 
+          { this.state.loggedIn ? <Home LogUser={this.LogUser}/> : <Redirect to='/'/>} 
           
         </Router>
       </div>
@@ -61,17 +61,17 @@ export default App;
 {
   /* <Login />
             <Register />
-            <Profile />
+            <Home />
             <Pictures />
-            <Favorites />
+            <Likes />
             <Settings /> */
 }
 // function App() {
 //   return (
 //     <div className="App">
 //       <Pictures />
-//       <Favorites />
-//       <Profile />
+//       <Likes />
+//       <Home />
 //       <Register />
 //     </div>
 //   );

@@ -10,7 +10,7 @@ import Davis from '../../Pictures/Davis.jpg';
 import Miles from '../../Pictures/Miles.jpg';
 import MilesSolo from '../../Pictures/MilesSolo.jpg';
 
-class Photos extends Component {
+class Likes extends Component {
     state={
         url: "https://api.unsplash.com/search/photos?query=",
         client: "&client_id=",
@@ -69,4 +69,4 @@ class Photos extends Component {
 
 }    
 
-export default Photos
+export default Likes
