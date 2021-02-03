@@ -1,6 +1,8 @@
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
-// Page
+// CSS
+import './Login.css';
+// Pages
 import Register from '../Register/Register'
 import { userLogin } from '../../redux/actions/Actions'
 import {connect} from 'react-redux'
@@ -15,6 +17,8 @@ class Login extends Component {
             email:'',
             password:'' 
         },
+        email:'',
+        password:'',
         newUser: false
     };
     
@@ -24,30 +28,55 @@ class Login extends Component {
             [e.target.name]: e.target.value
             }
         )
-        console.log(this.state);
     }
     
     onSubmit = e =>{
      e.preventDefault()
-        console.log(this.props)
+        console.log('onSubmit');
+        // let userName= this.state.User.email;
+        // console.log(userName);
         this.props.history.push('/home')
         this.props.LogUser();
     }
 
     render(){
-        console.log(this.props);
         return(
-            <div className='login-wrapper'>
-                <form onSubmit={this.onSubmit} className='login'>
-                    <input type='email' name='email' placeholder="Email"  value={this.state.email} onChange={this.handleChange}></input> <br/>
-                    <input id='myPW' type='password' placeholder='Password' name='password' value={this.state.password} onChange={this.handleChange} ></input>
-                <div className='login-register'>
-                    {/* <Link id='login' type="button" to="/home">Login</Link>&nbsp;&nbsp;&nbsp; */}
-                    <button id='login' value='login'>Login</button><br/>
-                    <Link id='register' type="button" to="/register">Register</Link>
-                    &nbsp;&nbsp;<p id='signup'>Not a user? Sign-up!</p>
-                    {/* <button id='register' value='newUser'>Register</button> */}
+            <div className='login'>
+                <div className='login_container'>
+                    <h3>Login to Jazz Social</h3>
                 </div>
+                <form onSubmit={this.onSubmit} className='login'>
+                    <center>
+                        <input type='email' name='email' placeholder="Email"  value={this.state.email} onChange={this.handleChange}></input> <br/>
+                    </center>
+                    <center>
+                        <input type='password' placeholder='Password' name='Password' value={this.state.password} onChange={this.handleChange} ></input>
+                    </center>
+                <div className='login_register'>
+                    {/* <Link id='login' type="button" to="/home">Login</Link>&nbsp;&nbsp;&nbsp; */}
+                    <center>
+                        <button className='login_btn' value='login'>Login</button>
+                    </center>
+                    <center>
+                        <h6>Forgot Password</h6>
+                    </center>
+                    <center>
+                        <hr />
+                    </center>
+                    <center>
+                        <p>Not a member? Create an account</p>
+                    </center>
+                    <center>
+                    <Link className='register_btn' type="button" to="/register">Register</Link>
+                        {/* <Link to='/register' /> */}
+                        {/* <button className='register-btn' type='button'>Create New Account</button> */}
+                    </center>
+                    {/* <center>
+                        <Link className='register-btn' type="button" to="/register">Register</Link>
+                        &nbsp;&nbsp;<p id='signup'>Not a user? Sign-up!</p>
+                    </center> */}
+                </div>
+                    
                 </form> <br/>
                 
             </div>

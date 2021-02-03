@@ -1,23 +1,26 @@
-body {
+/* * {
+  margin: 0;
+  position: relative;
   text-align: center;
-}
+} */
 /** App CSS **/
 
-.App-header-footer{
+/* .App-header-footer{
+  position: relative;
   text-align: center;
-}
+} */
 
 /** LOGIN CSS **/
 
-input{
+/* input{
   
   margin: 8px 0 1px 1em;
   border: 1px solid black;
   position: relative;
  
-}
+} */
 
-.login-wrapper{
+/* .login-wrapper{
   color:white;
   position: absolute;
   padding: 10px 40px 15px 2em;
@@ -66,12 +69,12 @@ input{
 #register:active {
   box-shadow:15px 10px 8px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
   background:linear-gradient(to right,#444 0%,#222 100%);
-}
+} */
 
 
 /** REGISTER CSS **/
 
-.form{
+/* .form{
 
   position: fixed;
   color: white;
@@ -100,52 +103,30 @@ p{
 #submit:active {
   box-shadow: 15px 10px 8px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
   background:linear-gradient(to right,#444 0%,#222 100%);
-}
-
-/** PROFILE CSS **/
-
-                    /**======LOGOUT======== **/
-/* .logout-link {
-  height: 10vmin;
-  pointer-events:stroke;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .logout-link {
-    animation: logout-link-spin infinite 20s linear;
-    
-  }
-}
-
-@keyframes logout-link-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(20deg);
-  }
 } */
 
-#logout{
-  margin: 0 90px 0 0;
-  font-size: 10px;
-  color: white;
-  display: flex;
-  flex-direction: row-reverse;
-}
+/** HOME CSS **/
+                    /**======HOME BODY======== **/
+/* .home-container{
+  margin: 100;
+} */
+
+                    /**======LOGOUT======== **/
+
+
+
 
                     /**======HEADER======== **/
-.header {
+/* .header {
   height: 10vmin;
   background-color: #282c34;
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
+} */
                     /**======NAVBAR======== **/
-.navbar {
-  margin: 0% 10% 5% 10%;
+/* .navbar {
+  margin-top: 800px;
   width: 75%;
   height: 1.5em;
   border: 2px solid yellow;
@@ -153,9 +134,21 @@ p{
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+} */
+
+/* section{
+  margin-bottom: 20px;
+  margin-right: 25px;
+  border: solid red 2px;
 }
 
-h6{
+aside{
+  margin-right: 80px;
+  margin-top: 500px;
+  border: solid blue 2px;
+} */
+
+/* h6{
   color: #61dafb;
   padding: 10px;
 }
@@ -163,7 +156,7 @@ h6{
 h6:hover{
   color: palevioletred;
   float: left;
-}
+} */
 
 
 /** SETTINGS CSS **/

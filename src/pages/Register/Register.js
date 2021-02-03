@@ -31,7 +31,7 @@ class Register extends Component {
                 <input type='text' placeholder='Last Name'></input> <br/>
                 <input type='email' placeholder='Email'></input> <br/>
                 <input type='password' placeholder='Password' name='password' value={this.state.password} onChange={this.handleChange}></input><br/>
-                <input type='password' placeholder='Confirm Password' value={this.state.ConfirmPW} onChange={this.handleChange} ></input>
+                <input type='password' placeholder='Verify Password' value={this.state.ConfirmPW} onChange={this.handleChange} ></input>
                 <p>(Password must be 8 characters minimum)</p>
             </form> <br/>
             <Link id='submit' type='button' to="/">Submit</Link>

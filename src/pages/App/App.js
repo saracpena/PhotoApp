@@ -1,15 +1,16 @@
 // React library import
 import React, { Component } from "react";
-// Route & Redirect component import
-import { Route, Switch, Redirect } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+// Route & Redirect component import  i.e. localhost:3000/register
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 // Pages
+import LoginHeader from '../LoginHeader/LoginHeader';
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Home from "../Home/Home";
 import Posts from "../Posts/Posts";
 import Likes from "../Likes/Likes";
 import Settings from "../Settings/Settings";
+import Pictures from '../../Images/Pictures'
 
 //CSS
 import "./App.css";
@@ -27,14 +28,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header-footer">
+        {/* <div className="App-header-footer">
           <header>J A Z Z &nbsp;&nbsp;&nbsp; C L U B </header>
-        </div>{" "}
+        </div>{" "} */}
         <br />
         <Router>
-        <Route path="/likes" component={Likes} />
+        {/* <Route path="/likes" component={Likes} /> */}
           <Switch>
-            <Route exact path="/" render={(props) => <Login {...props} LogUser={this.LogUser} />} />
+          {/* <Route path='/login' /> */}
+            <Route path='/login'>
+              <LoginHeader />
+            </Route>
+            {/* <Route exact path="/" render={(props) => <LoginHeader {...props} LogUser={this.LogUser} />} />  */}
+            <Route exact path="/" render={(props) => <Login {...props} LogUser={this.LogUser} />} /> 
             <Route
               path="/register"
               render={(props) => <Register {...props} LogUser={this.LogUser}/>}
@@ -46,10 +52,10 @@ class App extends Component {
             {/* <Route path="/Home" component={Home} /> */}
             <Route path="/posts" component={Posts} />
             {/* <Route path="/likes" component={Likes} /> */}
+            <Route path='/likes' component={Likes} />
             <Route path="/settings" component={Settings} />
           </Switch>
           { this.state.loggedIn ? <Home LogUser={this.LogUser}/> : <Redirect to='/'/>} 
-          
         </Router>
       </div>
     );
