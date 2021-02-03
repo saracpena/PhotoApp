@@ -1,6 +1,7 @@
 // [] is representing my Store i.e. data
 // When dealing with multiple action types
 import * as actions from "./actions/ActionTypes";
+// JSON files
 import posts from "./UserPosts";
 import users from "../redux/Users";
 
@@ -11,7 +12,6 @@ export const initialState = {
   loggedIn: false,
   comment: true,
   photo: true,
-
 };
 
 const reducers = (state = initialState, action) => {

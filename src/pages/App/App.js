@@ -28,10 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <div className="App-header-footer">
-          <header>J A Z Z &nbsp;&nbsp;&nbsp; C L U B </header>
-        </div>{" "} */}
-        <br />
+          <LoginHeader />
         <Router>
         {/* <Route path="/likes" component={Likes} /> */}
           <Switch>
@@ -39,7 +36,6 @@ class App extends Component {
             <Route path='/login'>
               <LoginHeader />
             </Route>
-            <Route exact path="/" render={(props) => <LoginHeader {...props} LogUser={this.LogUser} />} /> 
             <Route exact path="/" render={(props) => <Login {...props} LogUser={this.LogUser} />} /> 
             <Route
               path="/register"

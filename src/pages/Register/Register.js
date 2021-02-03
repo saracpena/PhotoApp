@@ -9,10 +9,11 @@ import Login from '../Login/Login'
 
 class Register extends Component {
     state={
-        Name:'',
-        Email:'',
-        PassWord:'',
-        Verify:''
+        firstname:'',
+        lastname:'',
+        email:'',
+        password:'',
+        verifypassword:''
     }
 
     handleChange = e => {
@@ -21,7 +22,6 @@ class Register extends Component {
             [e.target.name]: e.target.value
             }
         )
-        console.log(this.state);
     }
     
     render(){
@@ -32,19 +32,19 @@ class Register extends Component {
             </div>
             <form>
                 <center>
-                <input type='text' placeholder='First Name'></input>
+                <input type='text' name='firstname' placeholder='First Name'></input>
                 </center>
                 <center>
-                <input type='text' placeholder='Last Name'></input>
+                <input type='text' name='lastname' placeholder='Last Name'></input>
                 </center>
                 <center>
-                <input type='email' placeholder='Email'></input>
+                <input type='email' name='email' placeholder='Email'></input>
                 </center>
                 <center>
                 <input type='password' placeholder='Password' name='password' value={this.state.password} onChange={this.handleChange}></input>
                 </center>
                 <center>
-                <input type='password' placeholder='Verify Password' value={this.state.Verify} onChange={this.handleChange} ></input>
+                <input type='password' name='verifypassword' placeholder='Verify Password' value={this.state.Verify} onChange={this.handleChange} ></input>
                 </center>
                 <center>
                 <p>(Password must be 8 characters minimum)</p>

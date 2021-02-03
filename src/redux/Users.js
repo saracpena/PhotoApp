@@ -3,7 +3,7 @@
 const users = [
     {
         'name': 'Ray Brown',
-        'email': 'Ray@brown.com',
+        'email': 'ray@brown.com',
         'password': '12345678',
         'isLoggedIn': false,
         'favorites': ['Ella and I', 'Miles Solo', 'Ella Solo 1'],

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import './Login.css';
 // Pages
 import Register from '../Register/Register'
+import LoginHeader from '../LoginHeader/LoginHeader'
 import { userLogin } from '../../redux/actions/Actions'
 import {connect} from 'react-redux'
 
@@ -33,24 +34,29 @@ class Login extends Component {
     onSubmit = e =>{
      e.preventDefault()
         console.log('onSubmit');
-        // let userName= this.state.User.email;
-        // console.log(userName);
-        this.props.history.push('/home')
-        this.props.LogUser();
+                                            //loops over array and returns a new array
+        const authenticate = this.props.users.filter(user => this.state.email === user.email && this.state.password === user.password)
+        console.log(authenticate);
+        if(!authenticate.length) {
+            this.props.history.push('/home')
+            this.props.LogUser()
+        }
     }
 
     render(){
         return(
+            <>
+            {/* <LoginHeader /> */}
             <div className='login'>
                 <div className='login_container'>
-                    <h3>Login to Jazz Social</h3>
+                    <h3>Login</h3>
                 </div>
                 <form className='login_form' onSubmit={this.onSubmit} >
                     <center>
                         <input type='email' name='email' placeholder="Email"  value={this.state.email} onChange={this.handleChange}></input> <br/>
                     </center>
                     <center>
-                        <input type='password' placeholder='Password' name='Password' value={this.state.password} onChange={this.handleChange} ></input>
+                        <input type='password' placeholder='Password' name='password' value={this.state.password} onChange={this.handleChange} ></input>
                     </center>
                 <div className='login_register'>
                     {/* <Link id='login' type="button" to="/home">Login</Link>&nbsp;&nbsp;&nbsp; */}
@@ -68,18 +74,13 @@ class Login extends Component {
                     </center>
                     <center>
                     <Link className='register_btn' type="button" to="/register">Create New Account</Link>
-                        {/* <Link to='/register' /> */}
-                        {/* <button className='register-btn' type='button'>Create New Account</button> */}
                     </center>
-                    {/* <center>
-                        <Link className='register-btn' type="button" to="/register">Register</Link>
-                        &nbsp;&nbsp;<p id='signup'>Not a user? Sign-up!</p>
-                    </center> */}
                 </div>
                     
                 </form> <br/>
                 
             </div>
+            </>
         )
     }
 }
