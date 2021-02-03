@@ -7,9 +7,14 @@ import users from "../redux/Users";
 export const initialState = {
   users: users,
   posts: posts,
+  name:'',
+  loggedIn: false,
+  comment: true,
+  photo: true,
+
 };
 
-export default function reducer(state = initialState, action) {
+const reducers = (state = initialState, action) => {
   switch (action.type) {
     case actions.USER_ADDED:
       return [
@@ -33,28 +38,23 @@ export default function reducer(state = initialState, action) {
 
     case actions.ADD_COMMENT:
       return state.map((user) =>
-        user.item !== action.payload.item ? user : { ...user, login: true }
+        user.item !== action.payload.item ? user : { ...user, comment: true }
       );
-    //add the updated code later
-    //return the updated state after adding a comment
-    //the action is bringing here the data which needs to be updated -
-    //this comment needs to be added in the pictureData.js - pictures.comments - learn the syntax and the procedure
-    // return{
-    //     pictures[].comments: [...state.pictures[].comments, action.payload];
-    // }
+
     case actions.REMOVE_COMMENT:
       return state.map((user) =>
-        user.id !== action.payload.id ? user : { ...user, login: true }
+        user.item !== action.payload.item ? user : { ...user, comment: false }
       );
     case actions.ADD_PHOTO:
       return state.map((user) =>
-        user.id !== action.payload.id ? user : { ...user, login: true }
+        user.item !== action.payload.item ? user : { ...user, photo: true }
       );
     case actions.REMOVE_PHOTO:
       return state.map((user) =>
-        user.id !== action.payload.id ? user : { ...user, login: true }
+        user.item !== action.payload.item ? user : { ...user, photo: true }
       );
     default:
       return state;
   }
 }
+export default reducers
