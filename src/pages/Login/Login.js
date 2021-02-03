@@ -45,7 +45,7 @@ class Login extends Component {
                 <div className='login_container'>
                     <h3>Login to Jazz Social</h3>
                 </div>
-                <form onSubmit={this.onSubmit} className='login'>
+                <form className='login_form' onSubmit={this.onSubmit} >
                     <center>
                         <input type='email' name='email' placeholder="Email"  value={this.state.email} onChange={this.handleChange}></input> <br/>
                     </center>
@@ -64,10 +64,10 @@ class Login extends Component {
                         <hr />
                     </center>
                     <center>
-                        <p>Not a member? Create an account</p>
+                        <p>Not a member?</p>
                     </center>
                     <center>
-                    <Link className='register_btn' type="button" to="/register">Register</Link>
+                    <Link className='register_btn' type="button" to="/register">Create New Account</Link>
                         {/* <Link to='/register' /> */}
                         {/* <button className='register-btn' type='button'>Create New Account</button> */}
                     </center>

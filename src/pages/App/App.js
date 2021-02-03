@@ -39,7 +39,7 @@ class App extends Component {
             <Route path='/login'>
               <LoginHeader />
             </Route>
-            {/* <Route exact path="/" render={(props) => <LoginHeader {...props} LogUser={this.LogUser} />} />  */}
+            <Route exact path="/" render={(props) => <LoginHeader {...props} LogUser={this.LogUser} />} /> 
             <Route exact path="/" render={(props) => <Login {...props} LogUser={this.LogUser} />} /> 
             <Route
               path="/register"
