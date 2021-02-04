@@ -39,8 +39,9 @@
 
 .share_post{
     margin-left: 400px;
+    margin-top: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 

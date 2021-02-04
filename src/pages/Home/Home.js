@@ -46,7 +46,14 @@ class Home extends Component {
     }
 
     recentPost = e => {
-
+        // let recentPosts;
+        // this.props.posts.forEach(post => {
+        //     if(recent < post.likes){
+        //         likes = post.likes;
+        //         popPosts = post;//current object we are iterating over
+        //     }
+        // }) 
+        // return popPosts
     }
 
     render(){
