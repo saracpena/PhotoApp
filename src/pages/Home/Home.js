@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
 // CSS
 import './Home.css'
-// import Pictures from '../../Pictures'
-// import Photos from '../../components/pictures/Pictures'
-import {connect} from 'react-redux'
+
 
 class Home extends Component {
     state={
@@ -63,8 +62,8 @@ class Home extends Component {
         </h2>
         <nav className='navbar'>
             <Link to='/home'><h6>Home</h6></Link>
-            <Link to='/posts'><h6>Posts</h6></Link>
-            <Link to='/photos'><h6>Likes</h6></Link>
+            <Link to='/Posts'><h6>Posts</h6></Link>
+            <Link to='/likes'><h6>Likes</h6></Link>
             <Link to='/settings'><h6>Settings</h6></Link>
            <h6 onClick={this.logout}>Logout</h6>
         </nav>
@@ -85,7 +84,7 @@ class Home extends Component {
                 )
             } )}
         </section>
-        <section>
+        <section className='user_posts'>
             <p>{popPosts.likes}</p>
             <p>{popPosts.postedDate}</p>
             <img src={popPosts.source} />
@@ -106,8 +105,6 @@ const mapStateToProps = (state) => ({
     // trigger the action - > call the reducer -> reducer will change the state
     posts: state.posts
   })
-
-
 
     
 export default connect(mapStateToProps)(Home)

@@ -11,8 +11,6 @@ import Home from "../Home/Home";
 import Posts from "../Posts/Posts";
 import Likes from "../Likes/Likes";
 import Settings from "../Settings/Settings";
-import Pictures from '../../Images/Pictures'
-
 //CSS
 import "./App.css";
 
