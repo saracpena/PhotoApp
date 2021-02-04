@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 // CSS
 import './Login.css';
 // Pages
-import Register from '../Register/Register'
-import LoginHeader from '../LoginHeader/LoginHeader'
 import { userLogin } from '../../redux/actions/Actions'
 import {connect} from 'react-redux'
 

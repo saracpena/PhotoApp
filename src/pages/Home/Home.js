@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Login from '../Login/Login'
+// CSS
+import './Home.css'
 // import Pictures from '../../Pictures'
 // import Photos from '../../components/pictures/Pictures'
+import {connect} from 'react-redux'
 
 class Home extends Component {
     state={
@@ -32,8 +34,24 @@ class Home extends Component {
         )
     }
 
-    render(){
+    popularPost = e => {
+        let likes = 0; 
+        let popPosts;
+        this.props.posts.forEach(post => {
+            if(likes < post.likes){
+                likes = post.likes;
+                popPosts = post;//current object we are iterating over
+            }
+        }) 
+        return popPosts
+    }
 
+    recentPost = e => {
+
+    }
+
+    render(){
+    let popPosts = this.popularPost()
 // retrieve user image from logged in user
     return (
     <div className='home-container'>
@@ -54,7 +72,7 @@ class Home extends Component {
             <aside className='About-container'>
                 <p>About</p>
             </aside>
-            <form onSubmit={this.handleSubmit}>
+            <form className='share_post' onSubmit={this.handleSubmit}>
             <label htmlFor='description' ></label>
             <textarea placeholder='share a post' name='share' value={this.state.share} onChange={this.handleChange} />
             <input type='submit'/>
@@ -67,11 +85,32 @@ class Home extends Component {
                 )
             } )}
         </section>
+        <section>
+            <p>{popPosts.likes}</p>
+            <p>{popPosts.postedDate}</p>
+            <img src={popPosts.source} />
+            {popPosts.comments.map((comment, index) => {
+                return (
+                    <div key={index}>
+                        {comment.comments}
+                    </div>
+                )
+            })}
+        </section>
     </div> 
     )}
     }
 
-export default Home
+// create a copy of the props to make them accessible for this component
+const mapStateToProps = (state) => ({
+    // trigger the action - > call the reducer -> reducer will change the state
+    posts: state.posts
+  })
+
+
+
+    
+export default connect(mapStateToProps)(Home)
 
 //! Render a new welcome message and render name of User.
 // i.e. "{ Random new message }" with API? {this.state.name}"

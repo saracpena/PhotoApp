@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 // Pages
 import LoginHeader from '../LoginHeader/LoginHeader';
+import LoginFooter from '../LoginFooter/LoginFooter';
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Home from "../Home/Home";
@@ -53,6 +54,7 @@ class App extends Component {
           </Switch>
           { this.state.loggedIn ? <Home LogUser={this.LogUser}/> : <Redirect to='/'/>} 
         </Router>
+        <LoginFooter />
       </div>
     );
   }
