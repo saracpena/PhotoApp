@@ -7,7 +7,13 @@ import { connect } from 'react-redux'
 import { firestore } from 'firebase'
 
 function Settings() {
-
+connect(
+    // Map to props
+    ({firebase: { auth, profile }}) => ({
+        auth,
+        profile
+    })
+)
 // export const deleteUser = () => async (
 //     dispatch, 
 //     getState, 
