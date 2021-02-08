@@ -43,15 +43,19 @@ function Feed() {
 
 // addLike(() => {}
 
-    // prevent refreshing
-    const sendPost = e => {
-        e.preventDefault();
+// preventDefault to keep from refreshing after typing text
+ const sendPost = e => {
+    e.preventDefault();
+    // information that is stored from user posts 'add()' adds db firestore props I am calling
+    // which are stored in JSON format
         db.collection('posts').add({
             name: user.displayName,
             description: user.email,
+            // does this 'likes array' actually makes sense here?
             likes:[],
             message: input,
             photoURL: user.photoUrl || '',
+            //timestamp prop from my firestore db
             timestamp: Firebase.firestore.FieldValue.serverTimestamp()
         })
 

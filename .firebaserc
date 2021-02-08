@@ -1,5 +1,6 @@
 {
   "projects": {
-    "Deploy": "photo-app-clone"
+    "Deploy": "photo-app-clone",
+    "default": "photo-app-clone"
   }
 }

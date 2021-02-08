@@ -1,4 +1,5 @@
-// First install 'npm add firebase' firebase is a dependency
+// First, install 'npm add firebase' firebase is a dependency (API)
+// let's copy paste our firebase config
 import firebase from 'firebase'
 
 const firebaseConfig = {
