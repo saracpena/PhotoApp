@@ -1,0 +1,57 @@
+.updateprofile{
+    display:grid;
+    place-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+}
+
+.heading{
+    font-size: larger;
+    font-weight: 600;
+    color: #11a1ee;
+    margin-top: 20px;
+}
+
+.updateprofile > form {
+    display: flex;
+    flex-direction: column;
+    margin-top: -150px;
+}
+
+.updateprofile > form > input {
+    width: 350px;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.updateprofile > form > button {
+    width: 365px;
+    height: 50px;
+    font-size: large;
+    color: salmon;
+    background-color:darkblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.updateprofile > form > button:hover {
+    width: 365px;
+    height: 50px;
+    font-size: large;
+    color: whitesmoke;
+    background-color:red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login_register {
+    color: salmon;
+    cursor: pointer;
+}
+.login_register:hover {
+    color: white;
+    cursor: pointer;
+}
+
