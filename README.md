@@ -36,6 +36,7 @@
     • ReactJS
     • Redux
     • Firebase
+    • Material UI (MUI)
     • HTML
     • CSS
     • JSX/JS
