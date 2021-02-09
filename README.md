@@ -1,3 +1,19 @@
+# User Story
+
+    A social media app that keeps Jazz Artists and aficionados alike connected in realtime while sharing and updating events to performances around the globe!
+
+    • User Story #1: Existing User
+        • Add Post
+        • Like/Unlike Post
+        • Delete Account
+
+    • User Story #2: New User
+        • Create an Account
+        • Upload Profile Pic URL
+        • Add Post
+        • Like/Unlike Post
+        • Delete Account
+
 # PhotoApp Framework
 
 ![PhotoApp](https://media.giphy.com/media/50rKHxHUYfeE1crz71/giphy.gif)
@@ -10,9 +26,11 @@
 
 ![SocialMediaAppFinal](https://media.giphy.com/media/xFaYzxQHPBTY9e3eut/giphy.gif)
 
-# Deployed on Firebase
+# Deployed on Firebase and Heroku
 
     https://photo-app-clone.web.app
+
+    https://fotoapp.herokuapp.com/
 
 ### `npm start`
 

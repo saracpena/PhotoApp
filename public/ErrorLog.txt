@@ -1,0 +1,4 @@
+Deployments Firebase and Heroku are running into issues:
+    # https://photo-app-clone.web.app
+
+    # https://fotoapp.herokuapp.com/
