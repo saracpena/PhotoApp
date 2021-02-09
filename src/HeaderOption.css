@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     margin-right: 20px;
-    color: gray;
+    color: #11a1ee;
     cursor: pointer;
 }
 
@@ -19,6 +19,6 @@
 }
 
 .headerOption:hover{
-   color: black;
+   color: salmon
 }
 

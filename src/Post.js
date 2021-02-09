@@ -13,7 +13,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import SendIcon from '@material-ui/icons/Send';
 
 // began to destructure prop here and ended up,
-const Post = forwardRef(({ name , description, message, photoURL}, ref) => {
+const Post = forwardRef(({ id, name , description, message, photoURL, likeStatus }, ref) => {
 
     return (
     <div ref={ref} className='post'>
@@ -32,7 +32,7 @@ const Post = forwardRef(({ name , description, message, photoURL}, ref) => {
         <div className='post_buttons'>
             {/* Here I am reusing InputOption component that I created for Header.js  */}
             {/* used flex in CSS to render across instead of top to bottom */}
-            <LikeButton />
+            <LikeButton id={id} likeStatus={likeStatus} />
             <InputOption Icon={ChatIcon} title='Comment' color='gray'/>
             <InputOption Icon={ShareIcon} title='Share' color='gray'/>
             <InputOption Icon={SendIcon} title='Send' color='gray'/>

@@ -9,7 +9,7 @@ import HeaderOption from './HeaderOption';
 import HomeIcon from '@material-ui/icons/Home'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import SettingsIcon from '@material-ui/icons/Settings';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+// import NotificationsIcon from '@material-ui/icons/Notifications';
 // Firebase
 import { auth } from './Firebase';
 import { logout } from './features/userSlice';
@@ -17,9 +17,10 @@ import { logout } from './features/userSlice';
 
 function Header() { 
     const dispatch = useDispatch();
-
+//! dispatch logout action on avatar line 49
     const logoutOfApp = () => {
       dispatch(logout())
+      //! another firebase function signOut()
       auth.signOut();
     }
 

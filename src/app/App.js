@@ -21,9 +21,10 @@ function App() {
     const dispatch = useDispatch(); 
 
     useEffect(() => {
+//! onAuth() is a firebase () 'listener' that listens to any authentication changes
       auth.onAuthStateChanged((userAuth) => {
         if (userAuth) {
-          // user is logged in
+          // then the user is logged in
         dispatch(
           login({
             email: userAuth.email,
@@ -31,9 +32,10 @@ function App() {
             displayName: userAuth.displayName,
             photoUrl: userAuth.photoURL, 
         })
-        );
+        );//! Otherwise, the user is logged out
         } else {
-          // user is logged out
+          
+    //! dispatching reducer from userSlice.js
         dispatch(logout());
       }
     });

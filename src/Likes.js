@@ -16,8 +16,11 @@ function Likes() {
 
 // const user = useSelector(selectUser);
 const [posts, setPosts] = useState([]);
+const userId = useSelector(selectUser).uid;
+
 useEffect(() => {
     db.collection('posts')
+      .where('likes','array-contains', userId)
       .orderBy('timestamp', 'desc')
       .onSnapshot((snapshot) => 
         setPosts(

@@ -22,11 +22,12 @@ function Feed() {
 // thus making the following a hook,
  const [input, setInput] = useState('');
  const [posts, setPosts] = useState([]);
-
+console.log('posts', posts);
  
- //! useEffect hook allows us to fire off code when the Feed component loads. 
- //! It also allows us to fire off whatever the component re-renders if we don't pass a second argument.
- //! If we pass on a blank dependency like [empty array] in line 41, then it will fire off once the feed component loads but it will never fire off again after that 
+ //! useEffect is a hook function inside ReactJS that takes another function in its first param
+ //! that will "DO" things every time something changes.
+ //! What determines WHEN we call this function is we pass an array of properties i.e. all our dependencies. 
+ //! So anytime this array changes we run useEffect() line 48
  useEffect(() => {
 // importing db from local which was created as a variable in firebase.js
     db.collection('posts')
@@ -46,8 +47,6 @@ function Feed() {
         )
     );
 }, []);
-
-// addLike(() => {}
 
 // preventDefault to keep from refreshing after typing text
  const sendPost = e => {
@@ -87,20 +86,25 @@ function Feed() {
         </div>
 
         {/* Posts will be rendered here as they come in with an animation 'FlipMove' */}
-        <FlipMove>
+        <FlipMove>    
         {/* every time I have a post I render it on the browser and I also de-structured the post itself extracting each prop */}
-        {posts.map(({id, data: {name, description, likes, message, photoURL}}) => (
-            <Post 
+        {posts.map(({id, data: {name, description, likes, message, photoURL}}) => {
+         const likeStatus =(likes || []).includes(user.uid);
+         console.log(likeStatus);
+           return(
+           <Post 
                 //! KEYS are important when rendering lists. Without them React will re-render existing data while rendering
                 //! new data. This way, existing data remains, and the only thing rendering is NEW DATA.
                 key={id}
+// https://reactjs.org/warnings/special-props.html#:~:text=Most%20props%20on%20a%20JSX,not%20forwarded%20to%20the%20component
+                id={id}
                 name={name}
                 description={description}
                 likes={likes}
                 message={message}
                 photoURL={photoURL}
-            />
-        ))}
+            />)
+        })}
         </FlipMove>
         </div>
 }
