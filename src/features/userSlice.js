@@ -1,11 +1,16 @@
+// 
 import { createSlice } from '@reduxjs/toolkit';
 
-// storing user information
+//! userSlice, like an onion with multiple layers, contains all user info
+//? I can have different slices that serve unique functionality/purpose
+//? thus allowing store easier to maintain
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
     user: null,
+    like:''
   },
+  // there are my actions(state, action)
   reducers: {
     login: (state, action) => {
       state.user = action.payload;
@@ -19,12 +24,12 @@ export const userSlice = createSlice({
   },
 });
 
-export const { login, logout } = userSlice.actions;
+export const { login, logout, deleteUser} = userSlice.actions;
 
 //! Selectors
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
-// in the slice file. For example: `useSelector((state) => state.counter.value)`
+// in the slice file. For example: `useSelector((state) => state.user.value)`
 export const selectUser = (state) => state.user.user;
 
 export default userSlice.reducer;

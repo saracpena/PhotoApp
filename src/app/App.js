@@ -44,7 +44,7 @@ function App() {
     <div className="app">
       <Router>
       <Header />
-{/* if there is no user render Login otherwise render the app */}
+{/* TERNARY !user ? :Login- ----if there is no user, I want to render the Login page, otherwise render the app */}
       {!user ? (
         <Login />
       ) : (

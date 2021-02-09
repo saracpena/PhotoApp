@@ -12,13 +12,13 @@ const firebaseConfig = {
     measurementId: "G-LRM78XGGSP"
   };
 
-//! the following 'firebaseApp' connects/sets up our firebase, thus passing the 'firebaseConfig'
+//! the following 'firebaseApp' connects/sets up our firebase to our db in the cloud
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-//! access to firebase database
+//! gives access to firebase database and 'db' variable is accessible through my app
 const db = firebaseApp.firestore();
-//! access to firebase authentication
+//! gives access to firebase authentication i.e. 'login support' also accessible throughout my app
 const auth = firebase.auth();
 
-// makes them accessible 
+//! exporting makes them accessible 
 export { db, auth };
 export default firebase

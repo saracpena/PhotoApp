@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { auth } from './Firebase';
+import { auth } from './Firebase';//config
 import { login } from './features/userSlice'
 import './Login.css'
 
 function Login() {
-
+  //! creating consts that I will patch into each input field
     const [name, setName] = useState('');
     const [profilePic, setProfilePic] = useState('');
     const [email, setEmail] = useState('');
@@ -15,9 +15,8 @@ function Login() {
 
     const loginToApp = (e) => {
         e.preventDefault();
-
         auth.signInWithEmailAndPassword(email, password)
-         .then(userAuth => {
+          .then(userAuth => {
              dispatch(
                login({
                  email: userAuth.user.email,
@@ -33,15 +32,19 @@ function Login() {
         if(!name){
             return alert("Please enter full name");
         }
-
+//!importing auth var from firebase.js using a firebase function directly to email and password which will be created in the backend, firebase db
         auth.createUserWithEmailAndPassword(email, password).then(
+    //! If successfully creates user, update user profile based on user input
             (userAuth) => {
               userAuth.user
                 .updateProfile({
+          //! displayName/photoURL are KEYS in Firebase, name/profilePic are local info
                  displayName: name,
                  photoURL: profilePic,
               })
               .then(() => {
+        //! dispatch is now pushing the user into Firebase db with Redux hook, useDispatch imported above
+                        //! 'login action' from userSlice returns user object of the following,
                 dispatch(login({
                     email: userAuth.user.email,
                     uid: userAuth.user.uid,
@@ -59,7 +62,8 @@ function Login() {
         /> 
     
       <form>
-          <input value={name} onChange={e => setName(e.target.value)} placeholder='Full Name' type='email'/>
+          {/* Pulling in my const lines 8-11 to login user */}
+          <input value={name} onChange={e => setName(e.target.value)} placeholder='Full Name' type='text'/>
           <input value={profilePic} onChange={e => setProfilePic(e.target.value)} placeholder='Profile pic URL (optional)' type='email'/>
           <input value={email} onChange={e => setEmail(e.target.value)} placeholder='Email' type='email'/>
           <input value={password} onChange={e => setPassword(e.target.value)} placeholder='Password' type='password'/>
@@ -68,6 +72,7 @@ function Login() {
 
       <p>
           Not a member? {' '}
+          {/* Pulling the const line 31 to create a new user */}
           <span className='login_register' onClick={register}>
             Create an Account</span>
       </p>

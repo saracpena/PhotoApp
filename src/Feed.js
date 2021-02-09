@@ -7,7 +7,6 @@ import CreateIcon from '@material-ui/icons/Create';
 import ImageIcon from '@material-ui/icons/Image';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import EventNoteIcon from '@material-ui/icons/EventNote';
-import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
 import Post from './Post';
 // import db from local db
 import { db } from './Firebase'
@@ -29,16 +28,23 @@ function Feed() {
  //! It also allows us to fire off whatever the component re-renders if we don't pass a second argument.
  //! If we pass on a blank dependency like [empty array] in line 41, then it will fire off once the feed component loads but it will never fire off again after that 
  useEffect(() => {
+// importing db from local which was created as a variable in firebase.js
     db.collection('posts')
       .orderBy('timestamp', 'desc')
+    //! onSnapshot = a real-time 'listener' connection to the db of the "Posts collection" i.e. stored posts when user creates a new post.
+    //! and any time posts changes (deleted/edited/etc) it will gives us a snapShot
       .onSnapshot((snapshot) => 
+      //! anytime posts change I will update the state with following,
         setPosts(
+        //! in my collection I have 'doc' that I am iterating through and returning an object of id and data
+        //! following is directly mapped to my posts line 25 [posts, setPosts function as created here]
+        //! useState makes updates
             snapshot.docs.map((doc) => ({
                 id: doc.id,
                 data: doc.data(),
             }))
         )
-    );//real time posts collection when posts are add/deleted
+    );
 }, []);
 
 // addLike(() => {}
@@ -46,8 +52,8 @@ function Feed() {
 // preventDefault to keep from refreshing after typing text
  const sendPost = e => {
     e.preventDefault();
-    // information that is stored from user posts 'add()' adds db firestore props I am calling
     // which are stored in JSON format
+    //! I am pushing (w/ the add ()) data collected from user into my db (firestore) through the post we are 'listening' to in line 32
         db.collection('posts').add({
             name: user.displayName,
             description: user.email,
@@ -55,10 +61,10 @@ function Feed() {
             likes:[],
             message: input,
             photoURL: user.photoUrl || '',
-            //timestamp prop from my firestore db
+            //! timestamp makes it so all posts show up in the same 'timestamp' regardless of timezone/region --'serverTimestamp()
             timestamp: Firebase.firestore.FieldValue.serverTimestamp()
         })
-
+        //! This will CLEAR our input once we've created a post!
         setInput('');
     };
 
@@ -67,6 +73,7 @@ function Feed() {
             <div className="feed_input">
                 <CreateIcon />
                 <form>
+                    {/* we must add onChange because line 23 has empty string, thus it is infinitely cycling and it will not allow user to create a post without this functionality*/}
                     <input value={input} onChange={e => setInput(e.target.value)} type='text' placeholder='Share a post'/>
                     <button onClick={sendPost} type='submit'>Send</button>
                 </form>
@@ -79,11 +86,13 @@ function Feed() {
             </div>
         </div>
 
-        {/* Posts will be rendered here as they come in */}
+        {/* Posts will be rendered here as they come in with an animation 'FlipMove' */}
         <FlipMove>
-        {/* every time I have a post I render it on the browser */}
+        {/* every time I have a post I render it on the browser and I also de-structured the post itself extracting each prop */}
         {posts.map(({id, data: {name, description, likes, message, photoURL}}) => (
             <Post 
+                //! KEYS are important when rendering lists. Without them React will re-render existing data while rendering
+                //! new data. This way, existing data remains, and the only thing rendering is NEW DATA.
                 key={id}
                 name={name}
                 description={description}
