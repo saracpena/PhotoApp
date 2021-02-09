@@ -3,7 +3,6 @@ import React, { forwardRef } from 'react'
 import './Post.css'
 // Components
 import InputOption from './InputOption'
-import Feed from './Feed'
 import LikeButton from './components/LikeButton'
 // Icons from Material Icons
 import { Avatar } from '@material-ui/core'
@@ -12,7 +11,7 @@ import ChatIcon from '@material-ui/icons/Chat';
 import ShareIcon from '@material-ui/icons/Share';
 import SendIcon from '@material-ui/icons/Send';
 
-// began to destructure prop here and ended up,
+// destructured props here and with forwardRef allows Parent component to pass ref to children,
 const Post = forwardRef(({ id, name , description, message, photoURL, likeStatus }, ref) => {
 
     return (

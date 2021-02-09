@@ -33,7 +33,7 @@ console.log('posts', posts);
     db.collection('posts')
       .orderBy('timestamp', 'desc')
     //! onSnapshot = a real-time 'listener' connection to the db of the "Posts collection" i.e. stored posts when user creates a new post.
-    //! and any time posts changes (deleted/edited/etc) it will gives us a snapShot
+    //! and any time posts change (deleted/edited/etc) it will gives us a snapShot
       .onSnapshot((snapshot) => 
       //! anytime posts change I will update the state with following,
         setPosts(

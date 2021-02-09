@@ -28,6 +28,7 @@
     padding-left: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    opacity: .9;
 }
 .login > form > button {
     width: 365px;
@@ -36,6 +37,7 @@
     color: salmon;
     background-color:darkblue;
     border-radius: 5px;
+    opacity: .9;
     cursor: pointer;
 }
 
