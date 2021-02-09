@@ -12,7 +12,16 @@ import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
 
 
-function Likes() {
+const Likes = () => {
+    //! instead of using class component I used a function component and used useState to hook it to
+    // class Likes extends React.Component {
+    //     constructor(props) {
+    //       super(props);
+    //       this.state = {
+    //         posts,
+    //         userId
+    //       };
+    //     }
 
 // const user = useSelector(selectUser);
 const [posts, setPosts] = useState([]);

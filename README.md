@@ -16,7 +16,7 @@
 
 ## PhotoApp Framework
 
-![PhotoApp](https://media.giphy.com/media/50rKHxHUYfeE1crz71/giphy.gif)
+![PhotoApp](https://media.giphy.com/media/MNEZVtoMiyvtX0PHdv/giphy.gif)
 
 ## PhotoProtoType 1
 

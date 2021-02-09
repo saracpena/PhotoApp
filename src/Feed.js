@@ -16,7 +16,7 @@ import { selectUser } from './features/userSlice';
 
 // useState = Hook // RE-EXPLAIN 2:20
 function Feed() {
- const user = useSelector(selectUser);
+ const user = useSelector(selectUser); //!Line 28 in userSlice - recieves its redux state as its argument
 // Declaring state: capturing input and posts, for every variable I create using 'State' will come with a set of functions  
 // setInput and setPosts changes input and posts using = 'useState'
 // thus making the following a hook,

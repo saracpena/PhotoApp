@@ -1,16 +1,11 @@
-// 
 import { createSlice } from '@reduxjs/toolkit';
 
-//! userSlice, like an onion with multiple layers, contains all user info
-//? I can have different slices that serve unique functionality/purpose
-//? thus allowing store easier to maintain
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    user: null,
-    like:''
+    user: null
   },
-  // there are my actions(state, action)
+  // my actions(state, action)
   reducers: {
     login: (state, action) => {
       state.user = action.payload;

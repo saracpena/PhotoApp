@@ -13,7 +13,7 @@ import Settings from '../Settings';
 //
 import { login, logout, selectUser } from '../features/userSlice';
 import { auth } from '../Firebase'
-import { Switch } from '@material-ui/core';
+
 
 
 function App() {
