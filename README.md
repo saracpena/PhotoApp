@@ -10,7 +10,9 @@
 
 ![SocialMediaAppFinal](https://media.giphy.com/media/xFaYzxQHPBTY9e3eut/giphy.gif)
 
+# Deployed on Firebase
 
+    https://photo-app-clone.web.app
 
 ### `npm start`
 
