@@ -38,7 +38,7 @@ useEffect(() => {
     
     return (
         <div className='likes-navlink'>
-         <div className='feed_inputContainer'> Likes Component renders all of the users liked posts</div>
+         <div className='feed_inputContainer'>Some of my Favorite Posts</div>
             <div className="feed_input"></div>
             <FlipMove>
             {posts.map(({id, data: {name, description, likes, message, photoURL}}) => {

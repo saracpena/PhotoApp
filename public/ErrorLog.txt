@@ -1,4 +1,6 @@
-Deployments Firebase and Heroku are running into issues:
-    # https://photo-app-clone.web.app
+Deployments Firebase check SDK and Heroku are running into issues:
+    # 
 
     # https://fotoapp.herokuapp.com/
+
+Error: Target container is not a DOM element.
