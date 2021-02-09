@@ -1,5 +1,0 @@
-//! If we pass on a blank dependency like [empty array] in line 21, then it will fire off once the feed component loads but it will never fire off again after that 
-
-//! It also allows us to fire off whatever the component re-renders if we don't pass a second argument.
-
-//! useEffect hook allows us to fire off code when the Feed component loads. 

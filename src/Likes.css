@@ -1,6 +1,7 @@
 .likes-navlink{
     flex: 0.6;
     margin:0 20px;
+    height: 100vh;
 }
 
 .feed_inputContainer{
@@ -11,14 +12,7 @@
     margin-bottom: 20px;
 }
 
-.feed_input {
-    border: 1px solid lightgrey;
-    border-radius: 30px;
-    display: flex;
-    padding: 10px;
-    color: gray;
-    padding-left: 15px;
-}
+
 
 .feed_input > form {
     display: flex;

@@ -46,6 +46,7 @@ useEffect(() => {
             return (
             <Post 
                 key={id}
+// https://reactjs.org/warnings/special-props.html#:~:text=Most%20props%20on%20a%20JSX,not%20forwarded%20to%20the%20component
                 id={id}
                 name={name}
                 likeStatus={likeStatus}

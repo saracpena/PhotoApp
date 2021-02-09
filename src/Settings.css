@@ -1,6 +1,6 @@
 .updateprofile{
-    display:grid;
     place-items: center;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     height: 100vh;

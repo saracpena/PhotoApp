@@ -1,6 +1,6 @@
 # PhotoApp Framework
 
-![PhotoApp](https://media.giphy.com/media/7781YUy4OYy6qJvp15/giphy.gif)
+![PhotoApp](https://media.giphy.com/media/50rKHxHUYfeE1crz71/giphy.gif)
 
 # PhotoProtoType 1
 
@@ -8,7 +8,7 @@
 
 # Gold Release
 
-![PhotoProtoType](https://media.giphy.com/media/DGStIWTSad57hty2XE/giphy.gif)
+![SocialMediaAppFinal](https://media.giphy.com/media/xFaYzxQHPBTY9e3eut/giphy.gif)
 
 
 
