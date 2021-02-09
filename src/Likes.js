@@ -41,16 +41,20 @@ useEffect(() => {
          <div className='feed_inputContainer'> Likes Component renders all of the users liked posts</div>
             <div className="feed_input"></div>
             <FlipMove>
-            {posts.map(({id, data: {name, description, likes, message, photoURL}}) => (
+            {posts.map(({id, data: {name, description, likes, message, photoURL}}) => {
+            const likeStatus =(likes || []).includes(userId);
+            return (
             <Post 
                 key={id}
+                id={id}
                 name={name}
+                likeStatus={likeStatus}
                 description={description}
                 likes={likes}
                 message={message}
                 photoURL={photoURL}
-            />
-        ))}
+            />)
+        })}
             <div className='feed_inputOptions'></div>
         </FlipMove>
         </div>

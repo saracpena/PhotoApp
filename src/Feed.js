@@ -90,7 +90,6 @@ console.log('posts', posts);
         {/* every time I have a post I render it on the browser and I also de-structured the post itself extracting each prop */}
         {posts.map(({id, data: {name, description, likes, message, photoURL}}) => {
          const likeStatus =(likes || []).includes(user.uid);
-         console.log(likeStatus);
            return(
            <Post 
                 //! KEYS are important when rendering lists. Without them React will re-render existing data while rendering
@@ -99,6 +98,7 @@ console.log('posts', posts);
 // https://reactjs.org/warnings/special-props.html#:~:text=Most%20props%20on%20a%20JSX,not%20forwarded%20to%20the%20component
                 id={id}
                 name={name}
+                likeStatus={likeStatus}
                 description={description}
                 likes={likes}
                 message={message}

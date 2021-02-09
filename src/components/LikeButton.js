@@ -12,6 +12,7 @@ function LikeButton({ id, likeStatus }){
     
 const [likes, setLikes] = useState(likeStatus)
 const userId = useSelector(selectUser).uid;
+console.log('In like btn', likeStatus);
 
 const toggleLike = () => {
     console.log('toggleLike');
