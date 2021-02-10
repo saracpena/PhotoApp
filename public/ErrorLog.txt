@@ -12,6 +12,9 @@ Error: Target container is not a DOM element.
     • Why? Because the "like" shows up on every user's account whether they
     liked it or not.
 
+    ****CORRECTION, after interacting with app, it appears that Likes are rendering
+    as they should!
+
 # HUGE LIKE BUG!
     • Likes from other users are rendering in 'My Likes" on other user accounts, NOT GOOD!
     • Likes should only render on 'My Likes' for those who liked it!
