@@ -5,6 +5,40 @@ Deployments Firebase check SDK and Heroku are running into issues:
 
 Error: Target container is not a DOM element.
 
-# Unlike feature is NOT disappearing on the spot, address this asap
+# Unlike feature is NOT disappearing on the spot within 'My Likes', address this asap
+
+# Like feature is working well and appears on all User accounts
+    • ADD feature to render WHO liked that post
+    • Why? Because the "like" shows up on every user's account whether they
+    liked it or not.
 
 # Still pending: the DeleteUser feature
+
+#### BIG ERROR February 9, 2021 - Spent 4hrs figuring this out!
+    ######I SWAPPED FILES OF TWO DIFFERENT APPS THINKING IT WOULD BE OKAY, NOT! 
+••••I originally created a REPO on GitHub for this PhotoApp project which I then cloned so that it
+would show up locally onto my DESKTOP. Over time, I decided to scrap my original 'project' and pursue
+a SocialMedia clone where I then created a NEW APP 'photo-app-clone' via create-react-app and used 
+the same naming convention on Firebase-google db. 
+***OKAY...here comes the kicker....****
+    • Instead of 'uploading' photo-clone-app to my GitHub repo, I thought it would be easier to swap the files
+    from PhotoApp and photo-clone-app. HUGE MISTAKE! 
+    • EVEN THOUGH I had swapped these files meticulously,
+        #1 PhotoApp did NOT recognize all the installations I had originally made in 'photo-app-clone'
+            •So, I had to "re" install:
+                 -Firebase: npm install --save firebase (which allows me to properly host!, it wasn't before)
+                 -React Dom: npm install react react-dom
+                 -Material UI: npm install @material-ui/core & npm install @material-ui/icons
+                 -npm i -S react-flip-move (which is my posts animation)
+                 -Redux Toolkit (which handles functions like createSlice)
+            these installs only lived inside 'photo-app-clone', NOT PhotoApp. So, my files were not compiled because
+            of missing installations.
+        #2 I received "Error: Target container is not a DOM element.". So, I had to sift through 3 different index.html files and make sure my DOM was properly setup to the correct one.
+        • I'm not sure why I have 3 index.html but,
+            1. build > index.html
+            2. i > index.html
+            3. public > index.html
+        • After changing each index.html's <div id=''> from 'message' to 'root' to match getElementById('root')
+        it turned out that it was public > index.html that fixed the issue.
+        !!!! RESOLVED AND DOCUMENTED February 10, 12:55AM !!!!!!!!!
+        

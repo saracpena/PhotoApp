@@ -49,7 +49,7 @@ useEffect(() => {
         <div className='likes-navlink'>
          <div className='feed_inputContainer'>Some of my Favorite Posts</div>
             <div className="feed_input"></div>
-            <FlipMove>
+        <FlipMove>
             {posts.map(({id, data: {name, description, likes, message, photoURL}}) => {
             const likeStatus =(likes || []).includes(userId);
             return (

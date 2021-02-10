@@ -1,0 +1,43 @@
+//! 'login action' from userSlice returns user object of the following,
+
+//! I am pushing (w/ the add ()) data collected from user into my db (firestore) through the post we are 'listening' to in line 32
+
+//! If successfully creates user, update user profile based on user input
+
+//! So anytime this array changes we run useEffect() line 48
+
+//! This will CLEAR our input once we've created a post!
+
+//! What determines WHEN we call this function is we pass an array of properties i.e. all our dependencies. 
+
+//! another firebase function signOut()
+
+//! anytime posts change I will update the state with following,
+
+//! creating consts that I will patch into each input field
+
+//! dispatch is now pushing the user into Firebase db with Redux hook, useDispatch imported above
+
+//! dispatch logout action on avatar line 49
+
+//! displayName/photoURL are KEYS in Firebase, name/profilePic are local info
+
+//! following is directly mapped to my posts line 25 [posts, setPosts function as created here]
+
+//! in my collection I have 'doc' that I am iterating through and returning an object of id and data
+
+//! instead of using class component I used a function component and used useState to hook it to
+
+//! onAuth() is a firebase () 'listener' that listens to any authentication changes
+
+//! that will "DO" things every time something changes.
+
+//! timestamp makes it so all posts show up in the same 'timestamp' regardless of timezone/region --'serverTimestamp()
+
+//! useEffect is a hook function inside ReactJS that takes another function in its first param
+
+//! useState makes updates
+
+//!Line 28 in userSlice - recieves its redux state as its argument
+
+//!importing auth var from firebase.js using a firebase function directly to email and password which will be created in the backend, firebase db

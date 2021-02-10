@@ -1,0 +1,10 @@
+Deployments Firebase check SDK and Heroku are running into issues:
+    # https://photo-app-clone.web.app/
+
+    # https://fotoapp.herokuapp.com/
+
+Error: Target container is not a DOM element.
+
+# Unlike feature is NOT disappearing on the spot, address this asap
+
+# Still pending: the DeleteUser feature

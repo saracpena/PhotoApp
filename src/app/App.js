@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter as Router, Switch as RouterSwitch, Route } from 'react-router-dom'
-
+//CSS
 import './App.css';
+// Components
 import Login from '../Login'
 import Header from '../Header';
 import Sidebar from '../Sidebar';
