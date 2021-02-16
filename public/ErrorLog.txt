@@ -12,17 +12,16 @@ Error: Target container is not a DOM element.
     • Why? Because the "like" shows up on every user's account whether they
     liked it or not.
 
-    ****CORRECTION, after interacting with app, it appears that Likes are rendering
+    ****CORRECTION, after reengaging with the app, it appears that Likes are rendering
     as they should!
-
-# HUGE LIKE BUG!
-    • Likes from other users are rendering in 'My Likes" on other user accounts, NOT GOOD!
+ # LIKE BUG!
+    • Likes from other users are rendering in 'My Likes" on other user accounts!
     • Likes should only render on 'My Likes' for those who liked it!
     • Add KEY prop? UID prop? Must make the "Like" UNIQUE to the "Liker"
 
 # Still pending: the DeleteUser feature
 
-#### BIG ERROR February 9, 2021 - Spent 4hrs figuring this out!
+#### ERROR February 9, 2021 - total time = 4hrs
     ######I SWAPPED FILES OF TWO DIFFERENT APPS THINKING IT WOULD BE OKAY, NOT! 
 ••••I originally created a REPO on GitHub for this PhotoApp project which I then cloned so that it
 would show up locally onto my DESKTOP. Over time, I decided to scrap my original 'project' and pursue

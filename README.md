@@ -42,7 +42,7 @@
     • JSX/JS
 
 ### Unresolved Issues
-    • Deployments Firebase and Heroku are failing
+    • Deployments Firebase and Heroku are failing --MARKED RESOLVED 2/9/2021
 
 ### `npm start`
 
